@@ -10,7 +10,10 @@ import TodoListComponent from "../components/todo-components/TodoListComponent";
 class Page1 extends Component {
   render() {
     return (
-      <TodoListComponent/> 
+      <div>
+        <TodoListComponent/> 
+        <br/> 
+      </div>     
       );
   }
 }

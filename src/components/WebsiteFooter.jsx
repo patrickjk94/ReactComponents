@@ -5,7 +5,8 @@ class WebsiteFooter extends React.Component {
     render(){ 
         return (
             <div className="App-footer"> 
-                <p> This is my Footer </p> 
+                <p style={{ color: "#4CAF50" }}> Patrick Kennedy </p> 
+                <p> <a href="https://github.com/patrickjk94"> My github </a> </p> 
             </div> 
         )
     }

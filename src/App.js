@@ -16,26 +16,24 @@ import WebsiteFooter from './components/WebsiteFooter';
 class App extends Component {
   render() {
     return (
-        <div>
-        <Router>
-        <div>
-          {/** The Header **/}
-          <div className="App">
-            <header className="App-header">
-            <img src={logo} className="App-logo" alt="logo" />
-            <h1 className="App-title">Welcome these are some custom React Components</h1>
-            </header>
-          </div> 
+        <body>
+          <Router>
+          <div className="content">
+            <div className="App">
+              <header className="App-header">
+                <p className="App-title" > Simple React Components </p>
+              </header>
+            </div> 
             <SimpleNavbar/>  
-          <div className="content"> 
-            <Route exact path="/" component={Login} />
-            <Route path="/tablepage" component={TablePage} />
-            <Route path="/todopage" component={TodoPage} /> 
-          </div> 
+            <div className="content2"> 
+              <Route exact path="/" component={Login} />
+              <Route path="/tablepage" component={TablePage} />
+              <Route path="/todopage" component={TodoPage} /> 
+            </div> 
           </div>
           </Router>
           <WebsiteFooter className="footer"/> 
-        </div>
+        </body>
     );
   }
 }

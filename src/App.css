@@ -3,16 +3,8 @@ html, body {
 }
 
 body {
-  display: flex; 
-  flex-direction: column; 
-}
-
-.content {
-  flex: 1 0 auto; 
-}
-
-.footer {
-  flex-shrink: 0; 
+  display: grid;
+  grid-template-rows: 1fr auto;
 }
 
 .App {
@@ -26,15 +18,18 @@ body {
 
 .App-header {
   background-color: #505050;
-  height: 150px;
-  padding: 20px;
+  height: 50px;
+  padding: 10px;
   color: white;
 }
 
 .App-footer {
   background-color: #505050;
-  height: 50px;
-  padding: 20px;
+  height: 100%;
+  grid-row-start: 2;
+  grid-row-end: 3;
+
+  padding: 10px;
   color: white;
 
   position: relative;
@@ -56,4 +51,3 @@ body {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
-

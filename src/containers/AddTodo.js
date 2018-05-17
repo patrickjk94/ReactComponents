@@ -24,7 +24,6 @@ const AddTodo = ({ dispatch }) => {
         </div>​
 
       </form>
-      <br/> 
     </div>
   )
 }

@@ -17,7 +17,7 @@ class App extends Component {
   render() {
     return (
         <body>
-          <Router>
+          <Router basename={process.env.PUBLIC_URL}>
           <div className="wrapper"> 
             <div className="header"> 
               <WebsiteHeader/>

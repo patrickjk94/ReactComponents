@@ -18,9 +18,9 @@ const AddTodo = ({ dispatch }) => {
           input.value = ''
         }}
       >
-        <input type="submit" style={{float: "right"}}  value="Add Todo"/> 
-        <div style={{overflow: "hidden", paddingRight: ".5em"}}>
-        <input type="text" ref={node => input = node} style={{width: "100%"}} />
+        <div style={{overflow: "hidden"}}>
+          <input type="submit" style={{float: "right", width: "25%  ", height:"50%", margin: "0"}}  value="Add Todo"/> 
+          <input type="text" ref={node => input = node} style={{width: "74%", marginRight:".5em", margin:"0"}} />
         </div>​
 
       </form>

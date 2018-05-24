@@ -17,19 +17,9 @@ class Searchbar extends React.Component {
 
     render(){
         return (
-            <div> 
-            {/* <div className="search-container pull-right"> */}
             <form>
-            <input type="text" placeholder="Search.." style={{width:"50%"}} value={this.state.inputValue} onChange={e => this.updateInputValue(e)}/>
-            {/* <FormGroup controlId="formHorizontalAddTodo">
-                <Col sm={10}>
-                <FormControl type="input" placeholder="Enter Text" />
-                </Col>
-            </FormGroup> */}
+                <input type="text" placeholder="Search.." style={{width:"100%"}} value={this.state.inputValue} onChange={e => this.updateInputValue(e)}/>
             </form> 
-            </div>
-
-
             )
     }
 

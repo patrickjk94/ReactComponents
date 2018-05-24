@@ -3,7 +3,7 @@ import React, {Component} from 'react';
 /*
 *   A simple table header row implemented as a react component
 */
-export class MyHeader extends Component {
+export class MyTableHeader extends Component {
     render(){
     return (
         <thead>
@@ -19,4 +19,4 @@ export class MyHeader extends Component {
     }
 }
 
-export default MyHeader; 
+export default MyTableHeader; 

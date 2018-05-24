@@ -1,0 +1,38 @@
+.my_table_wrapper {
+    width: 100%;
+    height: 100%;
+}
+
+.my_table {
+    width: 100%;
+    height: 100%;
+    min-height: 100%; 
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+
+    padding: 0 0 0;
+    /* margin: auto; */
+    margin-right: auto; 
+    margin-left: auto;  
+    margin-bottom: 5px; 
+    overflow: auto;
+} 
+
+.my_table_left {
+    width: 40%;
+    height: 100%; 
+    min-height: 100%; 
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.my_table_right {
+    width: 25%;
+    height: 100%;   
+    min-height: 100%; 
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}

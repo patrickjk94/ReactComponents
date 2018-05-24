@@ -1,38 +1,39 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
-import { Button } from 'react-bootstrap'; 
-import  MyTable  from './components/MyTable'; 
-import { Table }   from 'react-bootstrap'; 
-import MyNavbar from './components/MyNavbar'; 
+import { Table }   from 'react-bootstrap';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
-import Login from './pages/Login'; 
-import TablePage  from './pages/TablePage'; 
-import TodoPage from './pages/TodoPage'; 
-import { Provider } from 'react-redux'; 
+import LoginPage from './pages/LoginPage';
+import TablePage  from './pages/TablePage';
+import TodoPage from './pages/TodoPage';
+import { Provider } from 'react-redux';
 import SimpleNavbar from './components/SimpleNavbar';
-import './App.css';
 import WebsiteFooter from './components/WebsiteFooter';
+import WebsiteHeader from './components/WebsiteHeader'; 
+
+import './App.css';
+import CardListPage from './pages/CardListPage';
 
 class App extends Component {
   render() {
     return (
         <body>
           <Router>
-          <div className="content">
-            <div className="App">
-              <header className="App-header">
-                <p className="App-title" > Simple React Components </p>
-              </header>
+          <div className="wrapper"> 
+            <div className="header"> 
+              <WebsiteHeader/>
+              <SimpleNavbar/>
             </div> 
-            <SimpleNavbar/>  
-            <div className="content2"> 
-              <Route exact path="/" component={Login} />
-              <Route path="/tablepage" component={TablePage} />
-              <Route path="/todopage" component={TodoPage} /> 
-            </div> 
-          </div>
+            <div className="content">
+                <Route exact path="/" component={LoginPage} />
+                <Route path="/tablepage" component={TablePage} />
+                <Route path="/todopage" component={TodoPage} />
+                <Route path="/cardlistpage" component={CardListPage} /> 
+            </div>
+            <div class="footer">    
+              <WebsiteFooter className="footer"/>
+            </div>          
+          </div> 
           </Router>
-          <WebsiteFooter className="footer"/> 
         </body>
     );
   }

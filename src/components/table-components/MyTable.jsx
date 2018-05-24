@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import MyRow from './MyRow'; 
-import { MyHeader } from './MyHeader';
+import { MyTableHeader } from './MyTableHeader';
 import Searchbar from './Searchbar.jsx';
 import { Table } from 'react-bootstrap'; 
+import NewUserForm from './NewUserForm'; 
 import "./MyTable.css"; 
 
 /*
@@ -18,6 +19,7 @@ class MyTable extends Component {
         }
         this.handleClick = this.handleClick.bind(this);
         this.handleSearch = this.handleSearch.bind(this); 
+        this.addUser = this.addUser.bind(this); 
     }
 
     handleClick(id)   {
@@ -63,24 +65,41 @@ class MyTable extends Component {
         ]});
     }
 
+    addUser(e, f, l, a) {
+        e.preventDefault();
+        let m_id = this.state.displayed_rows.length+1; 
+        this.setState({
+            displayed_rows: [
+                ...this.state.displayed_rows, 
+                {id:m_id, name: f, lastname: l, age: a}
+            ]
+        })
+        return false; 
+    }
+
   render() {
-    return ( <div className="my_table">
-        <Searchbar onClick={this.handleSearch} /> 
-        <br/> 
-        <br/> 
-        <Table  striped bordered condensed hover>
-        <MyHeader/> 
-        <tbody>
-            {this.state.displayed_rows.map(x=> <MyRow id={x.id} name={x.name} lastname={x.lastname} age={x.age} onClick={this.handleClick}/>)}
-        </tbody> 
-      </Table>
-    </div> )
+    return ( 
+        <div className="my_table_wrapper"> 
+        <div className="my_table">
+            <div className="my_table_left">
+                <Searchbar onClick={this.handleSearch} /> 
+                <br/> 
+                <br/> 
+                <Table  striped bordered condensed hover>
+                <MyTableHeader/> 
+                <tbody>
+                    {this.state.displayed_rows.map(x=> <MyRow id={x.id} name={x.name} lastname={x.lastname} age={x.age} onClick={this.handleClick}/>)}
+                </tbody> 
+                </Table>
+            </div> 
+            <div className="my_table_right"> 
+                <br/> 
+                <NewUserForm submitform={this.addUser}/>
+            </div>
+            </div> 
+        </div> 
+    )
   }
 }
 
 export default MyTable; 
-
-
-{/* <MyRow name="Patrick" lastname="Kennedy" age="24" /> 
-<MyRow name="Guy" lastname="Cool" age="20"  />
-<MyRow name="Another" lastname="Person" age="40"/>    */}

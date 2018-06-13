@@ -1,13 +1,13 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { addTodo } from '../actions'
+import { addTodo } from '../../../actions'
 import { FormControl, Button, Form, FormGroup, Col, ControlLabel} from 'react-bootstrap'
 
 const AddTodo = ({ dispatch }) => {
   let input;
 
   return (
-    <div>
+    <div >
       <form
         onSubmit={e => {
           e.preventDefault()
@@ -18,9 +18,9 @@ const AddTodo = ({ dispatch }) => {
           input.value = ''
         }}
       >
-        <div style={{overflow: "hidden"}}>
-          <input type="submit" style={{float: "right", width: "25%  ", height:"50%", margin: "0"}}  value="Add Todo"/> 
-          <input type="text" ref={node => input = node} style={{width: "74%", marginRight:".5em", margin:"0"}} />
+        <div className="todo-list-header"> {/*className="add-todo-input"*/} 
+          <input type="text" className="add-todo-input" ref={node => input = node} />
+          <input type="submit" className="add-todo-button"  value="Add Todo" /> 
         </div>​
 
       </form>

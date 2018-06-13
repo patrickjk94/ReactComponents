@@ -1,7 +1,7 @@
 import React from "react"; 
 // import "./NewUserForm.css";
 
-class NewUserForm extends React.Component {
+export default class NewUserForm extends React.Component {
 
     constructor(props){
         super(props);
@@ -48,18 +48,19 @@ class NewUserForm extends React.Component {
         return (
             <div>
                 <form className="add-user-form">
-                    First Name: <input type="text" className="add-user-firstname" value={this.state.fname} onChange={evt => this.updateFName(evt)}/>
+                    <div className="name-row"> 
+                        <div className="first-name"> 
+                            First Name: <input type="text" className="add-user-firstname" value={this.state.fname} onChange={evt => this.updateFName(evt)}/>
+                        </div> 
+                        <div className="last-name"> 
+                            Last Name: <input type="text" className="add-user-lastname" value={this.state.lname} onChange={evt => this.updateLName(evt)}/> 
+                        </div> 
+                    </div> 
                     <br/> 
-                    Last Name: <input type="text" className="add-user-lastname" value={this.state.lname} onChange={evt => this.updateLName(evt)}/> 
-                    <br/> 
-                    Age: <input type="text" className="add-user-age" value={this.state.age} onChange={evt => this.updateAge(evt)}/> 
-                    <br/> 
-                    <br/> 
-                    <button className="addUserButton" type="button" onClick={this.addUser}> Add User </button>  
+                    <button className="addUserButton" type="button" onClick={this.addUser}> Add User </button> 
                 </form> 
             </div>
         ); 
     }
 }
 
-export default NewUserForm; 

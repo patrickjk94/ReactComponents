@@ -1,0 +1,81 @@
+.todoList {
+    style: "width:100%"; 
+    width: 50%;
+    padding: 0 0 0;
+    margin: auto;  
+    margin-top: 8%; 
+    border:'1px solid black';
+}
+
+.todo-list-header {
+    display: flex; 
+    flex-direction: row; 
+}
+
+.add-todo-button {
+    width: "100%"; 
+    margin: 8px 0px 8px 10px;
+}
+
+.add-todo-input {
+    width: "25%";
+}
+
+.todo-footer {
+    display: flex; 
+    flex-direction: row; 
+    justify-content: center; 
+}
+
+.filter-todo-button {
+    font-family: "Roboto", sans-serif;
+    text-transform: uppercase;
+    outline: 0;
+    border: 0;
+    border-radius: 3px; 
+    padding: 15px;
+    font-size: 14px;
+    width: 100%; 
+    background-color: #666666; 
+    color: #FFFFFF; 
+    -webkit-transition: all 0.3 ease;
+    transition: all 0.3 ease;
+}
+
+@media screen and (max-width: 497px) {
+    .todo-footer{
+        flex-direction: column; 
+        justify-content: center; 
+    }
+    .filter-todo-button{
+        margin-bottom: 10px; 
+        width: 100%; 
+    }
+}
+
+@media screen and (max-width: 625px){
+    .todo-list-header {
+        flex-direction: column; 
+        align-items:center;  
+    }
+    .add-todo-button {
+        width: 100%; 
+        margin: 8px 0px 8px 0px; 
+    }
+}
+
+.filter-todo-button{
+}
+
+.all-button {
+    background-color: #660066; 
+}
+
+.active-button {
+    background-color: #666600; 
+}
+
+.completed-button {
+    background-color: #006666; 
+}
+

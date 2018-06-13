@@ -12,9 +12,6 @@ const Todo = ({ onClick, completed, text }) => (
     {text}
   </ListGroupItem>
 )
-// color: 'black',
-// background:'white', 
-
 
 Todo.propTypes = {
   onClick: PropTypes.func.isRequired,

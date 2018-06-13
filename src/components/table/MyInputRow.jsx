@@ -3,7 +3,7 @@ import {Button} from 'react-bootstrap';
 /*
 *   A simple table row implemented as a react component
 */
-export class MyRow extends Component {
+export default class MyRow extends Component {
 
     constructor(props) {
         super(props); 
@@ -17,13 +17,11 @@ export class MyRow extends Component {
     render(){
         return (
         <tr>
-            <td> {this.props.id} </td> 
-            <td> {this.props.name} </td>
-            <td> {this.props.lastname} </td> 
-            <td> {this.props.age} </td> 
-            <Button bsStyle="link" onClick={this.handleClick}><i className="fas fa-minus-circle"></i></Button> 
+            <td> </td> 
+            <td> <input id="row-input" />  </td>
+            <td> <input id="row-input" />  </td> 
+            <td> <input id="row-input" />  </td> 
+            <Button bsStyle="link" onClick={this.handleClick}><i className="fas fa-plus-circle"></i></Button> 
         </tr>);
         }
 }
-
-export default MyRow; 

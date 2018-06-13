@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { Button } from 'react-bootstrap'
 
 const Link = ({ active, children, onClick }) => (
-  <Button
+  <button className="filter-todo-button"
      onClick={onClick}
      disabled={active}
      style={{
@@ -11,7 +11,7 @@ const Link = ({ active, children, onClick }) => (
      }}
   >
     {children}
-  </Button>
+  </button>
 )
 
 Link.propTypes = {

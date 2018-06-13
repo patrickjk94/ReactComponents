@@ -1,15 +1,16 @@
 import React, { Component } from 'react';
 import MyRow from './MyRow'; 
-import { MyTableHeader } from './MyTableHeader';
+import MyTableHeader from './MyTableHeader';
 import Searchbar from './Searchbar.jsx';
 import { Table } from 'react-bootstrap'; 
+import MyInputRow from './MyInputRow'; 
 import NewUserForm from './NewUserForm'; 
 import "./MyTable.css"; 
 
 /*
  * A simple table implemented as a react component 
  */
-class MyTable extends Component {
+export default class MyTable extends Component {
 
     constructor() {
         super();
@@ -81,25 +82,18 @@ class MyTable extends Component {
     return ( 
         <div className="my_table_wrapper"> 
         <div className="my_table">
-            <div className="my_table_left">
                 <Searchbar onClick={this.handleSearch} /> 
                 <br/> 
-                <br/> 
-                <Table  striped bordered condensed hover>
-                <MyTableHeader/> 
-                <tbody>
-                    {this.state.displayed_rows.map(x=> <MyRow id={x.id} name={x.name} lastname={x.lastname} age={x.age} onClick={this.handleClick}/>)}
-                </tbody> 
-                </Table>
-            </div> 
-            <div className="my_table_right"> 
-                <br/> 
+                <table className="actual_table" bordered condensed>
+                    <MyTableHeader/> 
+                    <tbody>
+                        {this.state.displayed_rows.map(x=> <MyRow id={x.id} name={x.name} lastname={x.lastname} onClick={this.handleClick}/>)}
+                        {/* <MyInputRow/> */}
+                    </tbody> 
+                </table>
                 <NewUserForm submitform={this.addUser}/>
-            </div>
-            </div> 
         </div> 
+        </div>
     )
   }
 }
-
-export default MyTable; 

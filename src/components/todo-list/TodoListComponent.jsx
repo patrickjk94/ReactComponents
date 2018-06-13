@@ -1,10 +1,10 @@
 import React from "react"; 
-import AddTodo from '../../containers/AddTodo'; 
-import VisibleTodoList from '../../containers/VisibleTodoList'; 
+import AddTodo from './containers/AddTodo'; 
+import VisibleTodoList from './containers/VisibleTodoList'; 
 import Footer from './Footer'; 
 import './TodoListComponent.css'; 
 
-class TodoListComponent extends React.Component {
+export default class TodoListComponent extends React.Component {
     render(){
         return(
         <div className="todoList" >
@@ -16,5 +16,3 @@ class TodoListComponent extends React.Component {
     }
 }
 // style={ { border:'1px solid black' }}
-
-export default TodoListComponent

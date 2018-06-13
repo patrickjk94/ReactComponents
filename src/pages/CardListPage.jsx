@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import CardList from '../components/card-list-components/CardList';
+import CardList from '../components/card-list/CardList';
 
-class CardListPage extends Component {
+export default class CardListPage extends Component {
   
   render() {
     return (
@@ -9,5 +9,3 @@ class CardListPage extends Component {
     );
   }
 }
-
-export default CardListPage;

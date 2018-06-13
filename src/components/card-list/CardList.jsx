@@ -1,7 +1,8 @@
 import React from 'react'; 
 import MyCard from './MyCard';
+import './CardList.css'; 
 
-class CardList extends React.Component {
+export default class CardList extends React.Component {
     constructor(){
         super();
         this.state = {
@@ -30,13 +31,11 @@ class CardList extends React.Component {
                             return <MyCard m_color="happy" m_mood={listValue}></MyCard>; 
                     })}
                 </div> 
-                <div classname="my-button-row"> 
-                    <button className="card-button" onClick={this.happyButtonClicked}> Happy </button> 
+                <div className="my-button-row"> 
+                    <button className="card-button happy-button" onClick={this.happyButtonClicked}> Happy </button> 
                     <button className="card-button sad-button" onClick={this.sadButtonClicked}> Sad </button> 
                 </div>
            </div>
         )
     }
 }
-
-export default CardList; 

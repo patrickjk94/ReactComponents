@@ -1,0 +1,40 @@
+.container-drag-drop{
+    height: 400px; 
+    width: 50%; 
+    margin: auto; 
+    display : flex;
+    flex-direction: row; 
+}
+
+.container-drag{
+    width: 500px; 
+    margin-right: 20px; 
+}
+
+.container-drop{
+    width: 500px; 
+}
+
+.draggable {
+    height: 30px;
+}
+
+.DND-header {
+    width: 197px; 
+    margin: auto; 
+    margin-bottom: 10px; 
+}
+
+@media screen and (max-width: 600px){
+    .container-drag-drop{
+        width: 100%; 
+        flex-direction: column; 
+    }
+    .container-drag{
+        width: 75%; 
+    }
+    .container-drop{
+        margin-top: 50px; 
+        width: 75%; 
+    }
+}

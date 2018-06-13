@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import LoginComponent from '../components/LoginComponent';
+import LoginComponent from '../components/login/LoginComponent';
 
-class LoginPage extends Component {
+export default class LoginPage extends Component {
   
   render() {
     return (
@@ -9,5 +9,3 @@ class LoginPage extends Component {
     );
   }
 }
-
-export default LoginPage;

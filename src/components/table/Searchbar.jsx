@@ -1,7 +1,7 @@
 import React, {Component} from 'react'; 
 import {FormGroup, FormControl, Col, Button} from 'react-bootstrap'; 
 
-class Searchbar extends React.Component {
+export default class Searchbar extends React.Component {
     
     constructor(props) {
         super(props); 
@@ -31,5 +31,3 @@ class Searchbar extends React.Component {
     }
     
 }
-
-export default Searchbar; 

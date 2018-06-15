@@ -3,7 +3,6 @@ import MyRow from './MyRow';
 import MyTableHeader from './MyTableHeader';
 import Searchbar from './Searchbar.jsx';
 import { Table } from 'react-bootstrap'; 
-import MyInputRow from './MyInputRow'; 
 import NewUserForm from './NewUserForm'; 
 import "./MyTable.css"; 
 
@@ -16,7 +15,8 @@ export default class MyTable extends Component {
         super();
         this.state = {
             rows: [], 
-            displayed_rows: []
+            displayed_rows: [], 
+            contacts: []
         }
         this.handleClick = this.handleClick.bind(this);
         this.handleSearch = this.handleSearch.bind(this); 
@@ -84,13 +84,13 @@ export default class MyTable extends Component {
         <div className="my_table">
                 <Searchbar onClick={this.handleSearch} /> 
                 <br/> 
-                <table className="actual_table" bordered condensed>
+                <Table className="actual_table" bordered condensed>
                     <MyTableHeader/> 
                     <tbody>
                         {this.state.displayed_rows.map(x=> <MyRow id={x.id} name={x.name} lastname={x.lastname} onClick={this.handleClick}/>)}
                         {/* <MyInputRow/> */}
                     </tbody> 
-                </table>
+                </Table>
                 <NewUserForm submitform={this.addUser}/>
         </div> 
         </div>

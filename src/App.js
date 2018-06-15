@@ -16,7 +16,7 @@ import WebsiteFooter from './components/footer/WebsiteFooter';
 
 import CardListPage from './pages/CardListPage';
 import DragNDropComponent from './components/drag-n-drop/DragNDropComponent';
-
+import AxiosList from './components/axios-list/AxiosList';
 
 class App extends Component {
   render() {
@@ -34,6 +34,7 @@ class App extends Component {
                 <Route path="/cardlistpage" component={CardListPage} /> 
                 <Route path="/dragndroppage" component={DragNDropPage} /> 
                 <Route path="/creditcardpage" component={CreditCardPage} />
+                <Route path="/axioslistpage" component={AxiosList}/> 
             </div>
             <div class="footer">    
               {/* <WebsiteFooter className="footer"/> */}

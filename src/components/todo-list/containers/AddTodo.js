@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { addTodo } from '../../../actions'
+import { addTodo } from '../../../reducers/changeTabReducer'
 import { FormControl, Button, Form, FormGroup, Col, ControlLabel} from 'react-bootstrap'
 
 const AddTodo = ({ dispatch }) => {

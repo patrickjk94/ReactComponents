@@ -1,12 +1,6 @@
-import React, {Component} from 'react'; 
-import { connect } from 'react-redux'; 
-import { bindActionCreators } from 'redux'; 
+import React from 'react'; 
 import "./SimpleNavbar.css";
-import { changeTab } from '../../actions';
-import { Navbar } from 'react-bootstrap'; 
-import { NavLink, Link } from 'react-router-dom'; 
-import logo from '../../logo.svg';
-
+import { NavLink } from 'react-router-dom'; 
 
 export default class SimpleNavbar extends React.Component {
 
@@ -34,6 +28,7 @@ export default class SimpleNavbar extends React.Component {
                 <NavLink to="/todopage"  activeClassName="activeNavLink" onClick={this.myFunction}> TodoList </NavLink> 
                 <NavLink to="/cardlistpage" activeClassName="activeNavLink" onClick={this.myFunction}> CardList </NavLink> 
                 <NavLink to="/dragndroppage" activeClassName="activeNavLink" onClick={this.myFunction}> DragNDrop </NavLink> 
+                <NavLink to="/axioslistpage" activeClassName="activeNavLink" onClick={this.myFunction}> AxiosList </NavLink> 
                 <a className="icon" onClick={this.toggle}>
                    <i className="fa fa-bars"></i>
                 </a>

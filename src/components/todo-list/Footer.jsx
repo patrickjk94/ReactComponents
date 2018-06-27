@@ -1,6 +1,6 @@
 import React from 'react'
-import FilterLink from './containers/FilterLink'
-import { VisibilityFilters } from '../../reducers/changeTabReducer'
+import FilterLink from './containers/LinkContainer'
+import { VisibilityFilters } from '../../reducers/visibilityFilter'
 
 const Footer = () => (
   <div className="todo-footer">

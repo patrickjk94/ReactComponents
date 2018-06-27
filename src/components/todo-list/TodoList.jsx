@@ -6,7 +6,7 @@ import { ListGroup } from 'react-bootstrap'
 const TodoList = ({ todos, toggleTodo }) => (
   <ListGroup>
     {todos.map(todo =>
-      <div style={ { background: 'white' }} >
+      <div style={{ background: 'white' }} >
         <Todo
           key={todo.id}
           {...todo}

@@ -1,24 +1,18 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
-
-import { Table }   from 'react-bootstrap';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+
+import SimpleNavbar from './components/navbar/SimpleNavbar';
+
 import LoginPage from './pages/LoginPage';
 import TablePage  from './pages/TablePage';
 import TodoPage from './pages/TodoPage';
 import DragNDropPage from "./pages/DragNDropPage"; 
 import CreditCardPage from "./pages/CreditCardPage"; 
-
-import { Provider } from 'react-redux';
-import SimpleNavbar from './components/navbar/SimpleNavbar';
-import WebsiteFooter from './components/footer/WebsiteFooter';
-
 import CardListPage from './pages/CardListPage';
-import DragNDropComponent from './components/drag-n-drop/DragNDropComponent';
-import AxiosList from './components/axios-list/AxiosList';
+import AboutPage from './pages/AboutPage'; 
 
-class App extends Component {
+export default class App extends Component {
   render() {
     return (
         <body>
@@ -34,9 +28,9 @@ class App extends Component {
                 <Route path="/cardlistpage" component={CardListPage} /> 
                 <Route path="/dragndroppage" component={DragNDropPage} /> 
                 <Route path="/creditcardpage" component={CreditCardPage} />
-                <Route path="/axioslistpage" component={AxiosList}/> 
+                <Route path="/aboutpage" component={AboutPage} />
             </div>
-            <div class="footer">    
+            <div className="footer">    
               {/* <WebsiteFooter className="footer"/> */}
             </div>          
           </div> 
@@ -45,5 +39,3 @@ class App extends Component {
     );
   }
 }
-
-export default App;

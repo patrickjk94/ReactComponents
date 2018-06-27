@@ -8,7 +8,6 @@ export default class MyTableHeader extends Component {
     return (
         <thead>
             <tr>
-                <th> ID </th> 
                 <th> Firstname </th>
                 <th> Lastname </th> 
                 <th> </th> 

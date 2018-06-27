@@ -1,4 +1,6 @@
 import React from "react"; 
+import axios from "axios"; 
+
 // import "./NewUserForm.css";
 
 export default class NewUserForm extends React.Component {
@@ -24,24 +26,39 @@ export default class NewUserForm extends React.Component {
     }
 
     updateLName(evt){
+        console.log("updating lname")
         this.setState({
             lname: evt.target.value
         }); 
     }
 
     updateAge(evt){
+        console.log("updating age")
         this.setState({
             age: evt.target.value
         }); 
     }
 
     addUser(e){
+
+        var user = {
+            fname: this.state.fname, 
+            lname: this.state.lname, 
+            age: this.state.age
+        };
+        
+        //Send a post request to add user to API 
+        axios.post(`http://localhost:8000/addUser`, user )
+        .then(res => {
+            console.log(res);
+            console.log(res.data);
+        })          
+
         this.props.submitform(e, this.state.fname, this.state.lname, this.state.age); 
         this.setState({
             fname: '', 
-            lname: '', 
-            age: ''
-        })
+            lname: ''
+        })      
     }
 
     render(){

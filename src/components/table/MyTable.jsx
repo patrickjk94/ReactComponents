@@ -4,6 +4,7 @@ import MyTableHeader from './MyTableHeader';
 import Searchbar from './Searchbar.jsx';
 import { Table } from 'react-bootstrap'; 
 import NewUserForm from './NewUserForm'; 
+import axios from "axios"; 
 import "./MyTable.css"; 
 
 /*
@@ -18,24 +19,35 @@ export default class MyTable extends Component {
             displayed_rows: [], 
             contacts: []
         }
-        this.handleClick = this.handleClick.bind(this);
+        this.removeUser = this.removeUser.bind(this);
         this.handleSearch = this.handleSearch.bind(this); 
         this.addUser = this.addUser.bind(this); 
     }
 
-    handleClick(id)   {
-        let newArray = this.state.rows.slice();
-        var i;
-        for (i = 0; i < newArray.length; i++) {
-            if(newArray[i].id == id){
-                newArray.splice(i, 1);
-            }
-        }
-        // newArray.splice(id, 1);  
-        this.setState({
-            rows: newArray, 
-            displayed_rows: newArray
-          });    
+    componentWillMount() {
+        axios.get("http://localhost:8000/getAllUsers").then(response => {
+            
+            var i_id = 0; 
+            //create an array of users only with relevant data 
+            const newUsers = response.data.map(c => {
+                console.log(c); 
+                console.log(c.fname); 
+                console.log(c.lname); 
+                i_id = i_id +1; 
+                return {
+                    id: ('' + c._id),
+                    fname: c.fname, 
+                    lname: c.lname
+                }; 
+            }); 
+            
+            console.log("all users"); 
+            console.log(newUsers); 
+
+            //create a new state object without mutating the original State
+            this.setState({rows: newUsers});
+            this.setState({displayed_rows: newUsers});    
+        })
     }
 
     handleSearch(search_string) {
@@ -43,7 +55,6 @@ export default class MyTable extends Component {
         this.setState({
             displayed_rows: result
         })
-        // console.log(result);        
     }
 
     filterByValue(array, string) {
@@ -51,32 +62,42 @@ export default class MyTable extends Component {
             Object.keys(o).some(k => o[k].toLowerCase().includes(string.toLowerCase())));
     }
 
-    componentWillMount() {
-        this.setState({rows: [
-            {id:"1", name:"Jill", lastname:"Smith", age:"50"}, 
-            {id:"2", name:"Patrick", lastname:"Kennedy", age:"24"}, 
-            {id:"3", name:"Guy", lastname:"Cool", age:"20"}, 
-            {id:"4", name:"Another", lastname:"Person", age:"40"}
-        ]});
-        this.setState({displayed_rows: [
-            {id:"1", name:"Jill", lastname:"Smith", age:"50"}, 
-            {id:"2", name:"Patrick", lastname:"Kennedy", age:"24"}, 
-            {id:"3", name:"Guy", lastname:"Cool", age:"20"}, 
-            {id:"4", name:"Another", lastname:"Person", age:"40"}
-        ]});
-    }
-
+//Create
     addUser(e, f, l, a) {
         e.preventDefault();
         let m_id = this.state.displayed_rows.length+1; 
         this.setState({
             displayed_rows: [
                 ...this.state.displayed_rows, 
-                {id:m_id, name: f, lastname: l, age: a}
+                {id:m_id, fname: f, lname: l, age: a}
             ]
         })
         return false; 
     }
+
+//Remove
+        removeUser(id)   {
+            let newArray = this.state.rows.slice();
+            var i;
+            for (i = 0; i < newArray.length; i++) {
+                if(newArray[i].id == id){
+                    newArray.splice(i, 1);
+                }
+            }
+    
+            axios.delete('http://localhost:8000/user/'+id).then(function(response) {
+                console.log(response.data);
+            }).catch(function(error) {
+                console.log(error);
+            });
+    
+            // newArray.splice(id, 1);  
+            this.setState({
+                rows: newArray, 
+                displayed_rows: newArray
+              });    
+        }
+    
 
   render() {
     return ( 
@@ -87,7 +108,7 @@ export default class MyTable extends Component {
                 <Table className="actual_table" bordered condensed>
                     <MyTableHeader/> 
                     <tbody>
-                        {this.state.displayed_rows.map(x=> <MyRow id={x.id} name={x.name} lastname={x.lastname} onClick={this.handleClick}/>)}
+                        {this.state.displayed_rows.map(x => <MyRow id={x.id} fname={x.fname} lname={x.lname} onClick={this.removeUser}/>)}
                         {/* <MyInputRow/> */}
                     </tbody> 
                 </Table>

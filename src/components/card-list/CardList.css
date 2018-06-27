@@ -1,145 +1,151 @@
 .cardListComponent {
     display: flex;                 /* Children use Flexbox */ 
-    flex-direction: row; 
+    flex-direction: column-reverse; 
     overflow: hidden;
-    width: 70%; 
+    width: 30%; 
     max-width: 650px; 
     height: 450px; 
     margin: auto;  
 }
   
-  .cardList{
-    overflow: auto;
-    width: 90%; 
-    height: 90%; 
-    padding: 7px; 
-    overflow-y: scroll;
-   
-    margin: 10px; 
-    margin-bottom: 10px;
-    /* border-top: 2px solid  #C0C0C0;  */
-    /* border-bottom: 2px solid  #C0C0C0; */
-    /* border-left: 2px solid  #C0C0C0;  */
-    /* border-top: 2px solid  #4CAF50; 
-    border-bottom: 2px solid  #4CAF50;  */    
+.cardList{
+  overflow: auto;
+  width: 100%; 
+  height: 90%; 
+  padding: 7px; 
+  overflow-y: scroll;
+  
+  margin: 10px; 
+  margin-bottom: 10px;
 }
   
-  .my-button-row {
-    width: 55%; 
+.my-button-row {
+  width: 100%; 
+  display: flex;
+  flex-direction: row; 
+}
+  
+.card-button {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background: #4CAF50;
+  width: 100%;  
+  margin: 10px;
+  /* float: right;  */
+  /* center button    */
+  
+  border-radius: 0px;
+  border: 0;
+  padding: 15px;
+  color: #FFFFFF;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+}
+  
+.happy-button {
+  margin: 0px;
+  margin-top: 10px; 
+  margin-right: 10px;  
+  margin-left: 15px;  
+  border-radius: 3px; 
+}
+
+.sad-button {
+  background: blueviolet;
+  margin: 0px;
+  margin-top: 10px; 
+  margin-right: 15px;  
+  margin-left: 10px;  
+  border-radius: 3px; 
+}
+
+.Happycard {
+  width: 100%;                   /* Set width of cards */ 
+  border: 1px solid #4CAF50;   /* Set up Border */ 
+  border-radius: 4px;            /* Slightly curve edges */ 
+  overflow: hidden;              /* Fixes the corners */
+  margin-top: 10px;   
+  display: flex;                 /* Children use Flexbox */ 
+  flex-direction: column;        /* Rotate Axis */ 
+}
+  
+.Sadcard {
+  width: 100%;                      /* Set width of cards */ 
+  border: 1px solid blueviolet;   /* Set up Border */ 
+  border-radius: 4px;               /* Slightly curve edges */ 
+  overflow: hidden;                 /* Fixes the corners */
+  margin-top: 10px;   
+  display: flex;                    /* Children use Flexbox */ 
+  flex-direction: column;           /* Rotate Axis */ 
+}  
+  
+.Happycard-header {
+  color: #FFFFFF; 
+  text-align: center; 
+  font-size: 12px; 
+  font-weight: 600; 
+  border-bottom: 1px solid #4CAF50; 
+  background-color: #4CAF50; 
+  padding: 5px 10px; 
+}
+  
+.Sadcard-header {
+  color: #FFFFFF; 
+  text-align: center; 
+  font-size: 12px; 
+  font-weight: 600; 
+  border-bottom: 1px solid #8a2be2; 
+  background-color: #8a2be288; 
+  padding: 5px 10px; 
+}
+  
+  
+.Happycard-main {
+  display: flex;              /* Children use Flexbox */ 
+  flex-direction: row;        /* Rotate Axis to Vertical */ 
+  justify-content: center;    /* Group Children in Center */ 
+  align-items: center;        /* Group Children in Center (+axis) */ 
+  padding: 15px 0;            /* Add padding to the top/bottom */ 
+}
+  
+.Sadcard-main {
+  display: flex;              /* Children use Flexbox */ 
+  flex-direction: row;        /* Rotate Axis to Vertical */ 
+  justify-content: center;    /* Group Children in Center */ 
+  align-items: center;        /* Group Children in Center (+axis) */ 
+  padding: 15px 0;            /* Add padding to the top/bottom */ 
+}
+  
+.Happymain-description {
+  color: #4CAF50; 
+  font-size: 12px; 
+  text-align: center 
+}
+  
+.Sadmain-description {
+  color: #4CAF50; 
+  font-size: 12px; 
+  text-align: center 
+}
+  
+.Sad {
+  color: blueviolet; 
+}
+  
+@media screen and (max-width: 600px){
+  .cardListComponent {
+    flex-direction: column; 
+    width: 90%; 
   }
-  
-  .card-button {
-    font-family: "Roboto", sans-serif;
-    text-transform: uppercase;
-    outline: 0;
-    background: #4CAF50;
-    width: 100%;  
-    margin: 10px;
-    /* float: right;  */
-    /* center button    */
-    
-    border-radius: 0px;
-    border: 0;
-    padding: 15px;
-    color: #FFFFFF;
-    font-size: 14px;
-    -webkit-transition: all 0.3 ease;
-    transition: all 0.3 ease;
-    cursor: pointer;
+  .cardList{
+    width: 100%; 
+    order: 2; 
   }
-  
-  .sad-button {
-    background: blueviolet;
+  .my-button-row{
+    order: 1; 
+    width: 100%; 
   }
-  
-  .happy-button {
-  }
-  
-  
-  .Happycard {
-    width: 100%;                   /* Set width of cards */ 
-    border: 1px solid #4CAF50;   /* Set up Border */ 
-    border-radius: 4px;            /* Slightly curve edges */ 
-    overflow: hidden;              /* Fixes the corners */
-    margin-top: 10px;   
-    display: flex;                 /* Children use Flexbox */ 
-    flex-direction: column;        /* Rotate Axis */ 
-  }
-  
-  .Sadcard {
-    width: 100%;                      /* Set width of cards */ 
-    border: 1px solid blueviolet;   /* Set up Border */ 
-    border-radius: 4px;               /* Slightly curve edges */ 
-    overflow: hidden;                 /* Fixes the corners */
-    margin-top: 10px;   
-    display: flex;                 /* Children use Flexbox */ 
-    flex-direction: column;        /* Rotate Axis */ 
-  }
-  
-  
-  .Happycard-header {
-    color: #FFFFFF; 
-    text-align: center; 
-    font-size: 12px; 
-    font-weight: 600; 
-    border-bottom: 1px solid #4CAF50; 
-    background-color: #4CAF50; 
-    padding: 5px 10px; 
-  }
-  
-  .Sadcard-header {
-    color: #FFFFFF; 
-    text-align: center; 
-    font-size: 12px; 
-    font-weight: 600; 
-    border-bottom: 1px solid #8a2be2; 
-    background-color: #8a2be288; 
-    padding: 5px 10px; 
-  }
-  
-  
-  .Happycard-main {
-    display: flex;              /* Children use Flexbox */ 
-    flex-direction: row;        /* Rotate Axis to Vertical */ 
-    justify-content: center;    /* Group Children in Center */ 
-    align-items: center;        /* Group Children in Center (+axis) */ 
-    padding: 15px 0;            /* Add padding to the top/bottom */ 
-  }
-  
-  .Sadcard-main {
-    display: flex;              /* Children use Flexbox */ 
-    flex-direction: row;        /* Rotate Axis to Vertical */ 
-    justify-content: center;    /* Group Children in Center */ 
-    align-items: center;        /* Group Children in Center (+axis) */ 
-    padding: 15px 0;            /* Add padding to the top/bottom */ 
-  }
-  
-  .Happymain-description {
-    color: #4CAF50; 
-    font-size: 12px; 
-    text-align: center 
-  }
-  
-  .Sadmain-description {
-    color: #4CAF50; 
-    font-size: 12px; 
-    text-align: center 
-  }
-  
-  .Sad {
-    color: blueviolet; 
-  }
-  
-  @media screen and (max-width: 600px){
-    .cardListComponent {
-      flex-direction: column; 
-    }
-    .cardList{
-      width: 100%; 
-      order: 2; 
-    }
-    .my-button-row{
-      order: 1; 
-      width: 100%; 
-    }
-  }
+}

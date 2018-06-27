@@ -17,9 +17,8 @@ export default class MyRow extends Component {
     render(){
         return (
         <tr>
-            <td> {this.props.id} </td> 
-            <td> {this.props.name} </td>
-            <td> {this.props.lastname} </td> 
+            <td> {this.props.fname} </td>
+            <td> {this.props.lname} </td> 
             <td style={{textAlign:"center", verticalAlign: "middle", width:"50px"}}> <Button bsStyle="link" onClick={this.handleClick}><i className="fas fa-minus-circle"></i></Button> </td>  
         </tr>);
         }

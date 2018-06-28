@@ -15,14 +15,14 @@ export default class MyTable extends Component {
     constructor(props) {
         super();
         this.state = { rows: props.rows, displayed_rows: props.rows }; 
-        this.removeUser = this.removeUser.bind(this); 
+        // this.removeUser = this.removeUser.bind(this); 
         console.log("filter value: "); 
         console.log(props.filter);
     }
 
-    removeUser(id)   {
-        this.props.deleteUser(id); 
-    }
+    // removeUser(id)   {
+    //     this.props.deleteUser(id); 
+    // }
 
     handleSearch() {
         if(this.state && this.state.rows){
@@ -52,25 +52,25 @@ export default class MyTable extends Component {
 
     return ( 
         <div className="my_table_wrapper"> 
-        <div className="my_table">
-                <SearchBarContainer onClick={this.handleSearch} /> 
-                <br/> 
-                <Table className="actual_table" bordered condensed>
-                    <thead>
-                        <tr>
-                            <th> Firstname </th>
-                            <th> Lastname </th> 
-                            <th> </th> 
-                        </tr>
-                    </thead> 
-                    <tbody>
-                        {filtered_data.map(x => <MyRow id={x.id} fname={x.fname} lname={x.lname} onClick={this.removeUser}/>)}
-                        {/* <MyInputRow/>  */}
-                    </tbody> 
-                </Table>
-                <NewUserFormContainer/>
+            <div className="my_table"> 
+                    <SearchBarContainer onClick={this.handleSearch} />  
+                    <br/>  
+                    <Table className="actual_table" bordered condensed> 
+                        <thead> 
+                            <tr> 
+                                <th> Firstname </th> 
+                                <th> Lastname </th>  
+                                <th> </th>  
+                            </tr> 
+                        </thead>  
+                        <tbody> 
+                            {filtered_data.map(x => <MyRow id={x.id} fname={x.fname} lname={x.lname} onClick={this.props.removeUser}/>)} 
+                            {/* <MyInputRow/>  */}
+                        </tbody> 
+                    </Table>
+                    <NewUserFormContainer/>
+            </div> 
         </div> 
-        </div>
     )
   }
 

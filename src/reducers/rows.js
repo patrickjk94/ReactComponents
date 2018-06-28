@@ -17,12 +17,12 @@ const rows = (state, action) =>
       var i;
       for (i = 0; i < newArray.length; i++)
       {
-          if(newArray[i].id == action.id)
+          if(newArray[i].id === action.id)
           {
               newArray.splice(i, 1);
+              break;
           }
       }
-      newArray.splice(action.id, 1);  
       return newArray; 
     case "ADD_USER": 
       console.log("action: adduser"); 

@@ -1,33 +1,19 @@
 import axios from 'axios'; 
 
-export function itemsHasErrored(bool) {
-    return {
-        type: 'ITEMS_HAS_ERRORED',
-        hasErrored: bool
-    };
+//DELETE USER 
+export function deleteUser(id) {
+    return (dispatch) => {
+        axios.delete(`http://localhost:8000/removeUser/` + id )
+        .then(res => {
+            dispatch({
+                type: 'DELETE_USER',
+                id: id
+            })
+        })
+    }
 }
 
-export function itemsIsLoading(bool) {
-    return {
-        type: 'ITEMS_IS_LOADING',
-        isLoading: bool
-    };
-}
-
-export function itemsFetchDataSuccess(items) {
-    return {
-        type: 'ITEMS_FETCH_DATA_SUCCESS',
-        items
-    };
-}
-
-export function deleteUser(id) { 
-    return {
-        type: 'DELETE_USER',
-        id: id
-    };  
-}
-
+//ADD USER 
 export function addUser(user) {
     return (dispatch) => {
         //dispatch(itemsIsLoading(true));
@@ -44,6 +30,7 @@ export function addUser(user) {
     }
 }
 
+//LOAD DATA 
 export function tableDataLoaded(data){
     return {
         type: 'TABLE_DATA_LOADED', 
@@ -51,29 +38,11 @@ export function tableDataLoaded(data){
     }; 
 }
 
+//FETCH DATA 
 export function itemsFetchData(url) {
     return (dispatch) => {
-        //dispatch(itemsIsLoading(true));
-
         axios.get(url).then(response => {
             dispatch(tableDataLoaded(response.data));
         })
     }
-
-    //     fetch(url)
-    //         .then((response) => {
-    //             if (!response.ok) {
-    //                 throw Error(response.statusText);
-    //             }
-    //             console.log("Response: ");
-    //             console.log(response); 
-    //             //dispatch(itemsIsLoading(false));
-    //             console.log(response.json()); 
-
-    //             return response;
-    //         })
-    //         // .then((response) => response.json())
-    //         // .then((items) => dispatch(itemsFetchDataSuccess(items)))
-    //         // .catch(() => dispatch(itemsHasErrored(true)));
-    // };
 }

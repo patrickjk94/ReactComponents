@@ -13,7 +13,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    deleteUser: (id) => dispatch(deleteUser(id)), 
+    removeUser: (id) => dispatch(deleteUser(id)), 
     fetchData: (url) => dispatch(itemsFetchData(url))
   }
 }

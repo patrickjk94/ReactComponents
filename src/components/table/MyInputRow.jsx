@@ -17,9 +17,7 @@ export default class MyRow extends Component {
     render(){
         return (
         <tr>
-            <td> </td> 
             <td> <input id="row-input" />  </td>
-            <td> <input id="row-input" />  </td> 
             <td> <input id="row-input" />  </td> 
             <Button bsStyle="link" onClick={this.handleClick}><i className="fas fa-plus-circle"></i></Button> 
         </tr>);

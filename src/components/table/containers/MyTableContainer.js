@@ -1,13 +1,14 @@
 import { connect } from 'react-redux'
 import MyTable from '../MyTable'
 
-//Import the actions and action-creators 
+//Import the actions and action-creators
 import { itemsFetchData, deleteUser} from "../../../actions/table-actions";
 
 const mapStateToProps = state => {
-  console.log("mapStateToPropsCalled"); 
-  console.log(state); 
-  return {rows: state.rows}; 
+  return {
+    rows: state.rows,
+    filter: state.searchFilter 
+  }; 
 }
 
 const mapDispatchToProps = dispatch => {

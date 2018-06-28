@@ -36,12 +36,11 @@ export function addUser(user) {
         .then(res => {
             console.log(res);
             console.log(res.data);
-            return {
+            dispatch({
                 type: 'ADD_USER', 
                 user
-            }
-        })          
-    
+            })
+        })
     }
 }
 

@@ -1,9 +1,8 @@
 import React from "react"; 
-import axios from "axios"; 
 
 // import "./NewUserForm.css";
 
-export default class NewUserForm2 extends React.Component {
+export default class AddUser extends React.Component {
 
     constructor(props){
         super(props);
@@ -19,21 +18,15 @@ export default class NewUserForm2 extends React.Component {
         this.addUser = this.addUser.bind(this); 
     }
 
-    updateFName(evt){
-        this.setState({
-            fname: evt.target.value
-        }); 
-    }
+    updateFName(evt){ this.setState({ fname: evt.target.value }); }
 
     updateLName(evt){
-        console.log("updating lname")
         this.setState({
             lname: evt.target.value
         }); 
     }
 
     updateAge(evt){
-        console.log("updating age")
         this.setState({
             age: evt.target.value
         }); 

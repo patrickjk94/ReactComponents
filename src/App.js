@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
+import {connect} from 'react-redux'; 
 import './App.css';
+import { itemsFetchData } from './actions/table-actions';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 
 import SimpleNavbar from './components/navbar/SimpleNavbar';
@@ -12,7 +14,14 @@ import CreditCardPage from "./pages/CreditCardPage";
 import CardListPage from './pages/CardListPage';
 import AboutPage from './pages/AboutPage'; 
 
-export default class App extends Component {
+class App extends Component {
+
+  //Fetch data when the application mounts so that it's only loaded once. 
+  componentDidMount() {
+    this.props.fetchData('http://localhost:8000/getAllUsers');
+  }
+
+
   render() {
     return (
         <body>
@@ -39,3 +48,14 @@ export default class App extends Component {
     );
   }
 }
+
+const mapStateToProps = (state) => {
+};
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    fetchData: (url) => dispatch(itemsFetchData(url))
+  };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);

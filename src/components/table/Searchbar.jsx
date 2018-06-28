@@ -12,7 +12,8 @@ export default class Searchbar extends React.Component {
     }
 
     handleClick(){
-        this.props.onClick(); 
+        //this.props.onClick(); 
+        
     }
 
     render(){
@@ -27,7 +28,8 @@ export default class Searchbar extends React.Component {
         this.setState({
           inputValue: evt.target.value
         }); 
-        this.props.onClick(evt.target.value); 
+        this.props.updateFilter(evt.target.value); 
+        // this.props.onClick(evt.target.value); 
     }
     
 }

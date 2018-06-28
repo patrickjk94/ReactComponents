@@ -4,8 +4,8 @@ const rows = (state, action) =>
   console.log("rows is called"); 
   if (typeof state === 'undefined') {
     return [
-      {id: 1, fname: "Jhon", lname: "Adams"}, 
-      {id: 2, fname: "George", lname: "Washington"}
+      {id: "1123412", fname: "Jhon", lname: "Adams"}, 
+      {id: "5234523", fname: "George", lname: "Washington"}
     ]; 
   }
 
@@ -25,11 +25,13 @@ const rows = (state, action) =>
       newArray.splice(action.id, 1);  
       return newArray; 
     case "ADD_USER": 
+      console.log("action: adduser"); 
+      console.log(action); 
       return [ ...state, 
-        {id: (state.length+1), fname: action.fname, lname: action.lname} 
+        {id: (state.length+1), fname: action.user.fname, lname: action.user.lname} 
       ]; 
     case "TABLE_DATA_LOADED": 
-      return [...state, ...action.data]; 
+      return [...state, ...action.data.map(c => {return {id: c._id+"", fname: c.fname, lname: c.lname }})]; 
     default: 
       return state; 
   }

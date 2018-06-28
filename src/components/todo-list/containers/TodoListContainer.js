@@ -23,6 +23,7 @@ const mapDispatchToProps = dispatch => ({
   toggleTodo: id => dispatch(toggleTodo(id))
 })
 
+//Connect to TodoList component.
 export default connect(
   mapStateToProps,
   mapDispatchToProps

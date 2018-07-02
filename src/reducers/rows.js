@@ -1,14 +1,6 @@
 /* This is the todolist reducer */ 
-const rows = (state, action) => 
+const rows = (state = [], action) => 
 {
-  console.log("rows is called"); 
-  if (typeof state === 'undefined') {
-    return [
-      {id: "1123412", fname: "Jhon", lname: "Adams"}, 
-      {id: "5234523", fname: "George", lname: "Washington"}
-    ]; 
-  }
-
   /* Switch on the action types */ 
   switch(action.type)
   {
@@ -25,8 +17,6 @@ const rows = (state, action) =>
       }
       return newArray; 
     case "ADD_USER": 
-      console.log("action: adduser"); 
-      console.log(action); 
       return [ ...state, 
         {id: (state.length+1), fname: action.user.fname, lname: action.user.lname} 
       ]; 

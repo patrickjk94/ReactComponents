@@ -1,9 +1,8 @@
-/* This is the todolist reducer */ 
+/* 
+*  The Filter for searching for a user 
+*/ 
 const searchFilter = (state="", action) => 
 {
-  console.log("Search Filter: "); 
-  console.log(action.filter); 
-  /* Switch on the action types */ 
   switch(action.type)
   {
     case "UPDATE_USER_FILTER": 

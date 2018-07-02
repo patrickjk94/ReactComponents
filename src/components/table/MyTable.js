@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
 import MyRow from './MyRow'; 
-import Searchbar from './Searchbar.jsx';
 import { Table } from 'react-bootstrap'; 
 import "./css/MyTable.css"; 
-import NewUserFormContainer from './containers/AddUserContainer';
 import MyInputRow from './MyInputRow'; 
 import SearchBarContainer from './containers/SearchBarContainer';
 
@@ -53,22 +51,38 @@ export default class MyTable extends Component {
     return ( 
         <div className="my_table_wrapper"> 
             <div className="my_table"> 
-                    <SearchBarContainer onClick={this.handleSearch} />  
-                    <br/>  
-                    <Table className="actual_table" bordered condensed> 
-                        <thead> 
-                            <tr> 
-                                <th> Firstname </th> 
-                                <th> Lastname </th>  
-                                <th> </th>  
-                            </tr> 
-                        </thead>  
-                        <tbody> 
-                            {filtered_data.map(x => <MyRow id={x.id} fname={x.fname} lname={x.lname} onClick={this.props.removeUser}/>)} 
-                            {/* <MyInputRow/>  */}
-                        </tbody> 
-                    </Table>
-                    <NewUserFormContainer/>
+                <div className="table-header"/>
+                    <div className="my_table_content"> 
+
+                        <Table class_name="actual_table" bordered condensed> 
+                            <thead> 
+                                <tr> 
+                                    <th> Firstname </th> 
+                                    <th> Lastname </th>  
+                                    <th> </th>  
+                                </tr> 
+                            </thead>  
+                            <MyInputRow addUser={this.props.addUser}/> 
+                        </Table> 
+
+                        <SearchBarContainer onClick={this.handleSearch} />  
+                        <br/>  
+                        <form> 
+                        <Table className="actual_table" bordered condensed> 
+                            <thead> 
+                                <tr> 
+                                    <th> Firstname </th> 
+                                    <th> Lastname </th>  
+                                    <th> </th>  
+                                </tr> 
+                            </thead>  
+                            <tbody> 
+                                {filtered_data.map(x => <MyRow id={x.id} fname={x.fname} lname={x.lname} onClick={this.props.removeUser}/>)} 
+                            </tbody> 
+                        </Table>
+                        </form> 
+                    </div> 
+                    {/* <NewUserFormContainer/> */}
             </div> 
         </div> 
     )

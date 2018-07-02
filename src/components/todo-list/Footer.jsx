@@ -1,21 +1,24 @@
 import React from 'react'
-import LinkContainer from './containers/LinkContainer'
+import FilterButton from './FilterButton'
 import { VisibilityFilters } from '../../reducers/visibilityFilter'
 
-const Footer = () => (
-  <div className="todo-footer">
-    {/* <span>Show: </span> */}
-    <LinkContainer className="all-button" filter={VisibilityFilters.SHOW_ALL}>
-      All
-    </LinkContainer>
-    <LinkContainer className="active-button" filter={VisibilityFilters.SHOW_ACTIVE}>
-      Active
-    </LinkContainer>
-    <LinkContainer className="completed-button" filter={VisibilityFilters.SHOW_COMPLETED}>
-      Completed
-    </LinkContainer>
-    <br/> 
-  </div>
-);
+export default class Footer extends React.Component {
+  
+  render() {
+    return (
+      <div className="todo-footer">
+        <FilterButton className="all-button" filter={VisibilityFilters.SHOW_ALL}>
+          All
+        </FilterButton>
+        <FilterButton className="active-button" filter={VisibilityFilters.SHOW_ACTIVE}>
+          Active
+        </FilterButton>
+        <FilterButton className="completed-button" filter={VisibilityFilters.SHOW_COMPLETED}>
+          Completed
+        </FilterButton>
+        <br/> 
+    </div>  
+    )
+  }
 
-export default Footer
+}

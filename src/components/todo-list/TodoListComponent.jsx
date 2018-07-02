@@ -1,18 +1,20 @@
 import React from "react"; 
-import AddTodo from './containers/AddTodo'; 
-import VisibleTodoList from './containers/TodoListContainer'; 
+import AddTodoContainer from './AddTodo'; 
+import TodoListContainer from './containers/TodoListContainer'; 
 import Footer from './Footer'; 
-import './TodoListComponent.css'; 
+import './css/TodoListComponent.css'; 
 
 export default class TodoListComponent extends React.Component {
     render(){
         return(
         <div className="todoList" >
-            <AddTodo />
-            <VisibleTodoList />
-            <Footer />
+            <div className="todoListHeader"> </div>
+            <div className="todoListBody">
+                <AddTodoContainer />
+                <TodoListContainer />
+                <Footer />
+            </div> 
         </div> 
         )
     }
 }
-// style={ { border:'1px solid black' }}

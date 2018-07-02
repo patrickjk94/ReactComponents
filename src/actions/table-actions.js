@@ -17,7 +17,6 @@ export function deleteUser(id) {
 export function addUser(user) {
     return (dispatch) => {
         //dispatch(itemsIsLoading(true));
-
         axios.post(`http://localhost:8000/addUser`, user )
         .then(res => {
             console.log(res);

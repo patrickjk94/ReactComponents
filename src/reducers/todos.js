@@ -3,9 +3,9 @@ const todos = (state, action) =>
 {
   // Hard coded values for todo items 
   state = [
-    {id:53, text:"task one", completed:false}, 
-    {id:54, text:"task two", completed:true}, 
-    {id:55, text:"task three", completed:false}
+    {m_id:53, text:"task one", completed:false}, 
+    {m_id:54, text:"task two", completed:true}, 
+    {m_id:55, text:"task three", completed:false}
   ]; 
 
   switch (action.type) 
@@ -14,7 +14,7 @@ const todos = (state, action) =>
       return [
         ...state,
         {
-          id: action.id,
+          m_id: action.id,
           text: action.text,
           completed: false
         }
@@ -22,7 +22,13 @@ const todos = (state, action) =>
 
     case 'TOGGLE_TODO':
       // Iterate through todo items and if the ids match toggle todo.completed
-      return state.map(todo => (todo.id === action.id) ? {...todo, completed: !todo.completed} : todo) 
+      console.log("action id:"); 
+      console.log("" + action.id); 
+      var new_state = [...state]; 
+      var new_state = state.map(todo => (todo.m_id === action.id) ? {...todo, completed: !todo.completed} : todo); 
+      console.log("new state: "); 
+      console.log(new_state); 
+      return new_state; 
 
     default:
       return state

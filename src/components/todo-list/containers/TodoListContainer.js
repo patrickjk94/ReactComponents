@@ -16,6 +16,7 @@ const getVisibleTodos = (todos, filter) => {
 }
 
 const mapStateToProps = state => ({
+  // Sort the state.todos based on the visibility filter 
   todos: getVisibleTodos(state.todos, state.visibilityFilter)
 })
 

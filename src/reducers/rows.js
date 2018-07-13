@@ -21,7 +21,7 @@ const rows = (state = [], action) =>
         {id: (state.length+1), fname: action.user.fname, lname: action.user.lname} 
       ]; 
     case "TABLE_DATA_LOADED": 
-      return [...state, ...action.data.map(c => {return {id: c._id+"", fname: c.fname, lname: c.lname }})]; 
+        return [...state, ...action.data.map(c => {return {id: c._id+"", fname: c.fname, lname: c.lname }})]; 
     default: 
       return state; 
   }

@@ -40,7 +40,6 @@
     padding: 8px; 
 }
 
-
 .table-header p {
     size: 3em;
 }
@@ -52,8 +51,40 @@
 }
 
 
-.row-input {
+/***** ADD USER *********/ 
+
+.add-user-container {
+    display: flex; 
+    flex-direction: row; 
+}
+
+.add-user-button {
+    width: 20%; 
+    height: 40px; 
+    border: 1px solid #ccc;
+    display: inline; 
     border-radius: 2px; 
+
+    font-family: "Roboto", sans-serif;
+    text-transform: uppercase;
+    outline: 0; border: 0;
+    font-size: 14px;
+    background-color:  #4CAF50EE; 
+    color: #FFFFFF; 
+    -webkit-transition: all 0.3 ease;
+    transition: all 0.3 ease;    
+}
+
+.add-user-input {
+    width: 40%;
+    height: 40px; 
+    margin: 0px; 
+    margin-right: 5px; 
+    padding: 12px 20px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    box-sizing: border-box;  
 }
 
 /* User form css */ 
@@ -67,36 +98,33 @@
   
 .add-user-lastname {
     width: 50%; 
-    padding: 2px; 
     align-content: right; 
 }
   
 .add-user-age {
     width: 50%; 
-    padding: 2px; 
 }
-  
-.addUserButton {
-    font-family: "Roboto", sans-serif;
-    text-transform: uppercase;
-    outline: 0;
-    background: #4CAF50;
+
+
+/**** SEARCH BAR *********/ 
+
+.search-bar {
     width: 100%;
-
-    margin-top: 20px; 
-    margin-bottom: 20px; 
-    margin:0 auto;
-    display:block;
-
-    border-radius: 4px;
-    border: 0;
-    padding: 15px;
-    color: #FFFFFF;
-    font-size: 14px;
-    -webkit-transition: all 0.3 ease;
-    transition: all 0.3 ease;
-    cursor: pointer;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    box-sizing: border-box;  
 }
+
+/********* TABLE STUFF ****************/
+
+.row-input {
+    border-radius: 2px; 
+}
+
+  
 
 .name-row {
     display: flex; 

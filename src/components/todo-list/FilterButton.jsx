@@ -5,9 +5,11 @@ import { connect } from 'react-redux'
 
 class FilterButton extends React.Component 
 {
+
+
   render() {
     return (
-      <button className="filter-todo-button"
+      <button className={ this.props.active ?  this.props.className + " active-button" : this.props.className }
         onClick={ this.props.onClick }
         disabled={ this.props.active } 
         style={{ marginLeft: '4px' }}

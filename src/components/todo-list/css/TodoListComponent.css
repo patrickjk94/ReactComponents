@@ -29,14 +29,31 @@
     flex-direction: row; 
 }
 
-.add-todo-button {
-    width: "100%"; 
-    margin: 8px 0px 8px 10px;
+/************ ADD TODO BAR **************/ 
+
+.add-todo-input { 
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    box-sizing: border-box;  
 }
 
-.add-todo-input {
-    width: "25%";
-}
+.add-todo-button {
+    /** width: 100%; **/
+    margin: 8px 0px 8px 10px;
+    background-color: #4CAF50;
+    color: white;
+    padding: 11px 20px;
+    border: none;
+    border-radius: 2px;
+    font-size: 1.2em; 
+    cursor: pointer;
+  }  
+
+/********** TODO LIST FOOTER **************/ 
 
 .todo-footer {
     display: flex; 
@@ -49,7 +66,7 @@
     text-transform: uppercase;
     outline: 0;
     border: 0;
-    border-radius: 3px; 
+    border-radius: 2px; 
     padding: 15px;
     font-size: 14px;
     width: 100%; 
@@ -58,6 +75,15 @@
     -webkit-transition: all 0.3 ease;
     transition: all 0.3 ease;
 }
+
+/* Color for the active button */ 
+.active-button {
+    background-color: #4CAF50EE; 
+}
+
+
+
+/************ HANDLE SCREEN CHANGES ***********/ 
 
 @media screen and (max-width: 497px) {
     .todo-footer{
@@ -79,20 +105,5 @@
         width: 100%; 
         margin: 8px 0px 8px 0px; 
     }
-}
-
-.filter-todo-button{
-}
-
-.all-button {
-    background-color: #660066; 
-}
-
-.active-button {
-    background-color: #666600; 
-}
-
-.completed-button {
-    background-color: #006666; 
 }
 

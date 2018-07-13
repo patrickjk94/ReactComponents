@@ -1,6 +1,6 @@
 .cardListComponent {
   width: 30%; 
-  max-width: 650px; 
+  max-width: 325px; 
   height: 450px; 
   border: 2px solid grey;
   border-radius: 3px; 
@@ -23,7 +23,7 @@
 .cardList {
   width: 100%; 
   height: 90%; 
-  padding: 7px; 
+  padding: 10px; 
   overflow-y: scroll;
 }
 
@@ -63,23 +63,26 @@
   margin: 0px;
   margin-top: 10px; 
   margin-right: 10px;  
-  margin-left: 15px;  
-  border-radius: 3px; 
+  margin-left: 10px;  
+  border-radius: 2px; 
 }
 
 .sad-button {
   background: blueviolet;
   margin: 0px;
   margin-top: 10px; 
-  margin-right: 15px;  
+  margin-right: 10px;  
   margin-left: 10px;  
-  border-radius: 3px; 
+  border-radius: 2px; 
 }
+
+
+/******* CARD STUFF ***********/ 
 
 .Happycard {
   width: 100%;                   /* Set width of cards */ 
   border: 1px solid #4CAF50;   /* Set up Border */ 
-  border-radius: 4px;            /* Slightly curve edges */ 
+  border-radius: 2px;            /* Slightly curve edges */ 
   overflow: hidden;              /* Fixes the corners */
   margin-top: 10px;   
   display: flex;                 /* Children use Flexbox */ 
@@ -89,7 +92,7 @@
 .Sadcard {
   width: 100%;                      /* Set width of cards */ 
   border: 1px solid blueviolet;   /* Set up Border */ 
-  border-radius: 4px;               /* Slightly curve edges */ 
+  border-radius: 2px;               /* Slightly curve edges */ 
   overflow: hidden;                 /* Fixes the corners */
   margin-top: 10px;   
   display: flex;                    /* Children use Flexbox */ 

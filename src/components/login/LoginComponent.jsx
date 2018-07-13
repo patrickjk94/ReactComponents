@@ -22,4 +22,4 @@ export default class LoginComponent extends React.Component {
             </div>
         </div>
         }
-    }
+    } 

@@ -18,9 +18,8 @@ class App extends Component {
 
   //Fetch data when the application mounts so that it's only loaded once. 
   componentDidMount() {
-    this.props.fetchData('http://localhost:8000/getAllUsers');
+    this.props.fetchData('http://localhost:8000/getAllPersons');
   }
-
 
   render() {
     return (

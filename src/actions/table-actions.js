@@ -3,7 +3,7 @@ import axios from 'axios';
 //DELETE USER 
 export function deleteUser(id) {
     return (dispatch) => {
-        axios.delete(`http://localhost:8000/removeUser/` + id )
+        axios.delete(`http://localhost:8000/removePerson/` + id )
         .then(res => {
             dispatch({
                 type: 'DELETE_USER',
@@ -17,7 +17,7 @@ export function deleteUser(id) {
 export function addUser(user) {
     return (dispatch) => {
         //dispatch(itemsIsLoading(true));
-        axios.post(`http://localhost:8000/addUser`, user )
+        axios.post(`http://localhost:8000/addPerson`, user )
         .then(res => {
             console.log(res);
             console.log(res.data);

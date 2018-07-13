@@ -54,16 +54,16 @@ export default class MyTable extends Component {
                 <div className="table-header"/>
                     <div className="my_table_content"> 
 
-                        <Table class_name="actual_table" bordered condensed> 
+                        {/* <table class_name="actual_table" bordered condensed> 
                             <thead> 
                                 <tr> 
                                     <th> Firstname </th> 
                                     <th> Lastname </th>  
                                     <th> </th>  
                                 </tr> 
-                            </thead>  
+                            </thead>   */}
                             <MyInputRow addUser={this.props.addUser}/> 
-                        </Table> 
+                        {/* </table>  */}
 
                         <SearchBarContainer onClick={this.handleSearch} />  
                         <br/>  

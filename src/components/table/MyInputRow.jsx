@@ -28,11 +28,12 @@ export default class MyRow extends Component {
     render(){
         return (
             <React.Fragment>
-                <td> <input style={{ margin: "2px" }} value={this.state.fname} onChange={evt => this.updateFName(evt)}/>  </td>
-                <td> <input style={{ margin: "2px"  }} value={this.state.lname} onChange={evt => this.updateLName(evt)}/>  </td> 
-                <td> <Button type="submit" style={{textAlign:"center", verticalAlign: "middle", width:"50px", color:"#4CAF50"}} 
-                             bsStyle="link" onClick={this.handleClick}><i className="fas fa-plus-circle"></i></Button>  
-                </td> 
+                <div className="add-user-container">
+                    {/* <input type="text" placeholder="Search.." style={{width:"100%"}} value={this.state.inputValue} onChange={e => this.updateInputValue(e)}/> */}
+                    <input type="text" className="add-user-input" value={this.state.fname} onChange={evt => this.updateFName(evt)}/>
+                    <input type="text" className="add-user-input" value={this.state.lname} onChange={evt => this.updateLName(evt)}/>
+                    <button type="submit" className="add-user-button" bsStyle="link" onClick={this.handleClick}> Add User </button>
+                </div> 
             </React.Fragment> 
         );
         }

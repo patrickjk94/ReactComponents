@@ -19,7 +19,7 @@ export default class Searchbar extends React.Component {
     render(){
         return (
             <form>
-                <input type="text" placeholder="Search.." style={{width:"100%"}} value={this.state.inputValue} onChange={e => this.updateInputValue(e)}/>
+                <input className="search-bar" type="text" placeholder="Search.." style={{width:"100%"}} value={this.state.inputValue} onChange={e => this.updateInputValue(e)}/>
             </form> 
             )
     }

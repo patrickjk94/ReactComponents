@@ -1,9 +1,10 @@
 import axios from 'axios'; 
+var constants = require('../constants.js')
 
 //DELETE USER 
 export function deleteUser(id) {
     return (dispatch) => {
-        axios.delete(`http://localhost:8000/removePerson/` + id )
+        axios.delete(constants.server_url.concat(`/removePerson/`) + id )
         .then(res => {
             dispatch({
                 type: 'DELETE_USER',
@@ -16,8 +17,9 @@ export function deleteUser(id) {
 //ADD USER 
 export function addUser(user) {
     return (dispatch) => {
+        
         //dispatch(itemsIsLoading(true));
-        axios.post(`http://localhost:8000/addPerson`, user )
+        axios.post(constants.server_url.concat(`/addPerson`), user )
         .then(res => {
             console.log(res);
             console.log(res.data);

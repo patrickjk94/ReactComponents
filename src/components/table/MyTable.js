@@ -12,7 +12,7 @@ export default class MyTable extends Component {
 
     constructor(props) {
         super();
-        this.state = { rows: props.rows, displayed_rows: props.rows }; 
+        this.state = { rows: props.rows, displayed_rows: props.rows, alert_message: "Success!", alert_success: true }; 
         // this.removeUser = this.removeUser.bind(this); 
         console.log("filter value: "); 
         console.log(props.filter);
@@ -34,8 +34,11 @@ export default class MyTable extends Component {
     filterByValue(array, string) {
         return array.filter(o =>
             Object.keys(o).some(k => {
-                return o[k].toLowerCase().includes(string.toLowerCase()); 
-            }));
+                if(o[k] && typeof o[k] == "string")
+                    return o[k].toLowerCase().includes(string.toLowerCase()); 
+                else 
+                    return false; 
+                }));
     }
 
     getFilteredData(){
@@ -50,6 +53,11 @@ export default class MyTable extends Component {
 
     return ( 
         <div className="my_table_wrapper"> 
+
+            {/* <div class="my_alert">
+                <p><strong>{this.state.alert_message}</strong></p>
+            </div> */}
+
             <div className="my_table"> 
                 <div className="table-header"/>
                     <div className="my_table_content"> 
@@ -67,7 +75,7 @@ export default class MyTable extends Component {
 
                         <SearchBarContainer onClick={this.handleSearch} />  
                         <br/>  
-                        <form> 
+                        <form>
                         <Table className="actual_table" bordered condensed> 
                             <thead> 
                                 <tr> 
@@ -80,7 +88,7 @@ export default class MyTable extends Component {
                                 {filtered_data.map(x => <MyRow id={x.id} fname={x.fname} lname={x.lname} onClick={this.props.removeUser}/>)} 
                             </tbody> 
                         </Table>
-                        </form> 
+                        </form>
                     </div> 
                     {/* <NewUserFormContainer/> */}
             </div> 

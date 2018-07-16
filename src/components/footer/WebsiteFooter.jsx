@@ -1,5 +1,5 @@
 import React from 'react';
-import "./WebsiteFooter.jsx"; 
+import "./WebsiteFooter"; 
 
 export default class WebsiteFooter extends React.Component { 
     render() { 

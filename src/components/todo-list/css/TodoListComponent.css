@@ -1,8 +1,7 @@
 .todoList {
     style: "width:100%"; 
     width: 50%;
-    margin: auto;  
-    margin-top: 8%; 
+    margin-right: 10px; 
     border: 2px solid grey;
     border-radius: 3px; 
 }

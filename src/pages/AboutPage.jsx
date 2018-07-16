@@ -20,6 +20,8 @@ export default class CardListPage extends Component {
           <li> nodejs </li> 
           <li> mongodb </li> 
           <li> express </li> 
+          <li> mongoose </li> 
+          <li> passport </li> 
         </ul> 
     </div> 
     );

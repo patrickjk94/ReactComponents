@@ -18,7 +18,7 @@ class App extends Component {
 
   //Fetch data when the application mounts so that it's only loaded once. 
   componentDidMount() {
-    this.props.fetchData('http://full-mern-api.herokuapp.com/getAllPersons');
+    this.props.fetchData('https://full-mern-api.herokuapp.com/getAllPersons');
   }
 
   render() {

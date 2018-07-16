@@ -17,11 +17,13 @@ const rows = (state = [], action) =>
       }
       return newArray; 
     case "ADD_USER": 
+      console.log("ADD_USER"); 
       return [ ...state, 
         {id: (state.length+1), fname: action.user.fname, lname: action.user.lname} 
       ]; 
     case "TABLE_DATA_LOADED": 
-        return [...state, ...action.data.map(c => {return {id: c._id+"", fname: c.fname, lname: c.lname }})]; 
+        console.log(action.data);
+        return [...state, ...action.data.map(c => {return {id: "" + c._id, fname: c.fname, lname: c.lname }})]; 
     default: 
       return state; 
   }

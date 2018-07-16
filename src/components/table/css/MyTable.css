@@ -4,6 +4,24 @@
     width: 100%;
 }
 
+/* .my_alert {
+    width: 60%;
+    max-width: 500px; 
+    margin-right: auto; 
+    margin-left: auto;
+    
+    background-color: #5CBF60; 
+    height: 50px; 
+    border-radius: 3px; 
+    margin-bottom: 10px; 
+
+    text-align: center;
+    vertical-align: middle;
+    line-height: 50px;       /* the same as your div height */
+    /* color: black;  */
+/* }  */
+
+
 .my_table {
     width: 60%;
     max-width: 500px; 
@@ -31,6 +49,7 @@
     height: 40px;
     width: 100%; 
     background-color: #4CAF50;
+    /* background-color: gray; */
 
     max-width: 500px; 
 
@@ -38,6 +57,7 @@
 
 .my_table_content {
     padding: 8px; 
+    padding-top: 13px; 
 }
 
 .table-header p {

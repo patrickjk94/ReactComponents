@@ -1,5 +1,6 @@
 import React from 'react';
 import './LoginComponent.css'; 
+import { NavLink } from 'react-router-dom'; 
 
 export default class LoginComponent extends React.Component {
     render() {
@@ -17,7 +18,7 @@ export default class LoginComponent extends React.Component {
                 <input type="text" placeholder="username"/>
                 <input type="password" placeholder="password"/>
                 <button>login</button>
-                <p className="message">Not registered? <a href="#"> Create an account </a></p>
+                <p className="message">Not registered? <a href="#" onClick={this.props.register}> Create an account </a></p>
                 </form>
             </div>
         </div>

@@ -14,6 +14,7 @@ import CreditCardPage from "./pages/CreditCardPage";
 import CardListPage from './pages/CardListPage';
 import AboutPage from './pages/AboutPage'; 
 import ListPage from './pages/ListPage'; 
+import CardList from './components/card-list/CardList';
 
 class App extends Component {
 
@@ -31,6 +32,7 @@ class App extends Component {
               <SimpleNavbar/>
             </div> 
             <div className="content">
+              <div className="content-right">
                 <Route exact path="/" component={LoginPage} />
                 <Route path="/tablepage" component={TablePage} />
                 <Route path="/todopage" component={TodoPage} />
@@ -39,10 +41,10 @@ class App extends Component {
                 <Route path="/creditcardpage" component={CreditCardPage} />
                 <Route path="/aboutpage" component={AboutPage} />
                 {/* <Route path="/listpage" component={ListPage} />  */}
+              </div>
             </div>
-            <div className="footer">    
-              {/* <WebsiteFooter className="footer"/> */}
-            </div>          
+            {/* <div className="footer">    
+            </div>         */}
           </div> 
           </Router>
         </body>

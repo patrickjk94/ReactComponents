@@ -1,10 +1,17 @@
 /* Add a black background color to the top navigation */
 .topnav {
-    background-color:#4A4A4A;
+    background-color:#6A6A6A;
     overflow: hidden;
     padding-bottom: 0px;
+
+    text-align: center;
   }
   
+  .topnav-content{
+    width: 50%;
+    margin: 0 auto;
+  }
+
   /* Style the links inside the navigation bar */
   .topnav a {
     float: left;

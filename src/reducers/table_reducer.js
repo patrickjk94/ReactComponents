@@ -1,5 +1,5 @@
 /* This is the todolist reducer */ 
-const rows = (state = [], action) => 
+const table_reducer = (state = { has_data: false, rows: [] }, action) => 
 {
   /* Switch on the action types */ 
   switch(action.type)
@@ -22,11 +22,15 @@ const rows = (state = [], action) =>
         {id: (state.length+1), fname: action.user.fname, lname: action.user.lname} 
       ]; 
     case "TABLE_DATA_LOADED": 
-        console.log(action.data);
-        return [...state, ...action.data.map(c => {return {id: "" + c._id, fname: c.fname, lname: c.lname }})]; 
+        let new_state = {}; 
+        new_state.has_data = ! state.has_data; 
+        new_state.rows = [...state.rows, ...action.data.map(c => {return {id: "" + c._id, fname: c.fname, lname: c.lname }})]; 
+        console.log(new_state); 
+        return new_state; 
+        // return [...state, ...action.data.map(c => {return {id: "" + c._id, fname: c.fname, lname: c.lname }})]; 
     default: 
       return state; 
   }
 }
 
-export default rows
+export default table_reducer

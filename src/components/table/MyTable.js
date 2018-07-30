@@ -12,15 +12,10 @@ export default class MyTable extends Component {
 
     constructor(props) {
         super();
-        this.state = { rows: props.rows, displayed_rows: props.rows, alert_message: "Success!", alert_success: true }; 
-        // this.removeUser = this.removeUser.bind(this); 
+        this.state = { rows: props.rows, displayed_rows: props.rows, has_data: props.has_data }; 
         console.log("filter value: "); 
         console.log(props.filter);
     }
-
-    // removeUser(id)   {
-    //     this.props.deleteUser(id); 
-    // }
 
     handleSearch() {
         if(this.state && this.state.rows){
@@ -52,14 +47,9 @@ export default class MyTable extends Component {
     let filtered_data = this.getFilteredData(); 
 
     return ( 
-        <div className="my_table_wrapper"> 
-
-            {/* <div class="my_alert">
-                <p><strong>{this.state.alert_message}</strong></p>
-            </div> */}
 
             <div className="my_table"> 
-                <div className="table-header"/>
+                <div className="table-header"> <p> Users </p> </div> 
                     <div className="my_table_content"> 
 
                         {/* <table class_name="actual_table" bordered condensed> 
@@ -76,6 +66,7 @@ export default class MyTable extends Component {
                         <SearchBarContainer onClick={this.handleSearch} />  
                         <br/>  
                         <form>
+                        { this.props.has_data == false && <div className="my-table-alert"> Retrieving data from Server ... </div> } 
                         <Table className="actual_table" bordered condensed> 
                             <thead> 
                                 <tr> 
@@ -90,9 +81,7 @@ export default class MyTable extends Component {
                         </Table>
                         </form>
                     </div> 
-                    {/* <NewUserFormContainer/> */}
             </div> 
-        </div> 
     )
   }
 

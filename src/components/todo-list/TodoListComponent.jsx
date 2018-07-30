@@ -8,7 +8,7 @@ export default class TodoListComponent extends React.Component {
     render(){
         return(
         <div className="todoList" >
-            <div className="todoListHeader"> </div>
+            <div className="todoListHeader"> <p> Todolist </p> </div>
             <div className="todoListBody">
                 <AddTodoContainer />
                 <TodoListContainer />

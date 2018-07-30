@@ -32,7 +32,7 @@ class AddTodo extends React.Component {
         <form onSubmit={e => this.submit(e)}>
           <div className="todo-list-header"> {/*className="add-todo-input"*/} 
             <input type="text" className="add-todo-input" onChange={evt => this.updateInput(evt)} />
-            <input type="submit" className="add-todo-button"  value="Add Todo" /> 
+            <input type="submit" className="add-todo-button"  value="Add" /> 
           </div>​
         </form>
         </div> 

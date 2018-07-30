@@ -13,6 +13,7 @@ import DragNDropPage from "./pages/DragNDropPage";
 import CreditCardPage from "./pages/CreditCardPage"; 
 import CardListPage from './pages/CardListPage';
 import AboutPage from './pages/AboutPage'; 
+import ListPage from './pages/ListPage'; 
 
 class App extends Component {
 
@@ -37,6 +38,7 @@ class App extends Component {
                 <Route path="/dragndroppage" component={DragNDropPage} /> 
                 <Route path="/creditcardpage" component={CreditCardPage} />
                 <Route path="/aboutpage" component={AboutPage} />
+                {/* <Route path="/listpage" component={ListPage} />  */}
             </div>
             <div className="footer">    
               {/* <WebsiteFooter className="footer"/> */}

@@ -54,7 +54,7 @@ export default class AddUser extends React.Component {
                         </div> 
                     </div> 
                     <br/> 
-                    <button className="addUserButton" type="button" onClick={this.addUser}> Add User </button> 
+                    <button className="addUserButton" type="button" onClick={this.addUser}> Add </button> 
                 </form> 
             </div>
         ); 

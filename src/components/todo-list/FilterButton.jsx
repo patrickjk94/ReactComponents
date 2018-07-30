@@ -5,8 +5,6 @@ import { connect } from 'react-redux'
 
 class FilterButton extends React.Component 
 {
-
-
   render() {
     return (
       <button className={ this.props.active ?  this.props.className + " active-button" : this.props.className }
@@ -27,6 +25,8 @@ FilterButton.propTypes = {
 }
 
 /**** Do redux stuff ****/ 
+
+
 const mapStateToProps = (state, ownProps) => ({
   active: ownProps.filter === state.visibilityFilter
 }); 

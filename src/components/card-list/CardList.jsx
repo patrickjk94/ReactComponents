@@ -23,7 +23,7 @@ export default class CardList extends React.Component {
     render(){
         return (
             <div className="cardListComponent"> 
-                <div className="cardListHeader"></div>
+                <div className="cardListHeader">Mood Tracker</div>
                 <div className="cardListBody"> 
                     <div className="cardList "> 
                         {this.state.my_list.map(function(listValue){
@@ -33,9 +33,9 @@ export default class CardList extends React.Component {
                                 return <MyCard m_color="happy" m_mood={listValue}></MyCard>; 
                         })}
                     </div> 
-                    <div className="my-button-row"> 
+                    <div className="my-button-row">
+                        <button className="card-button sad-button" onClick={this.sadButtonClicked}> Sad </button>
                         <button className="card-button happy-button" onClick={this.happyButtonClicked}> Happy </button> 
-                        <button className="card-button sad-button" onClick={this.sadButtonClicked}> Sad </button> 
                     </div>
                 </div>
         </div> 

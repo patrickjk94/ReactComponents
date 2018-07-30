@@ -1,0 +1,22 @@
+.list-page-container {
+    /* background: #440044;  */
+    width: 100%; 
+    /* height: 500px;  */
+    margin-right: 20px; 
+    margin-left: 20px; 
+    display: flex;
+    flex-direction: row;  
+    justify-content: space-around;
+
+}
+.list-table-container {
+    width: 40%; 
+}
+
+.list-todo-container {
+    width: 20%; 
+}
+
+.list-card-container {  
+    width: 20%; 
+}

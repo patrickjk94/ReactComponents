@@ -1,2 +1,2 @@
 A running instance of my project can be found here: 
-https://patrickjk94.github.io/ReactComponents/cardlistpage
+https://patrickjk94.github.io/ReactComponents/aboutpage

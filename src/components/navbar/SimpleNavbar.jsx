@@ -29,8 +29,9 @@ export default class SimpleNavbar extends React.Component {
                         <NavLink to="/" exact    activeClassName="activeNavLink" onClick={this.myFunction}> Login </NavLink> 
                         <NavLink to="/tablepage" activeClassName="activeNavLink" onClick={this.myFunction}> Table </NavLink> 
                         <NavLink to="/todopage"  activeClassName="activeNavLink" onClick={this.myFunction}> TodoList </NavLink> 
-                        <NavLink to="/cardlistpage" activeClassName="activeNavLink" onClick={this.myFunction}> CardList </NavLink> 
+                        <NavLink to="/cardlistpage" activeClassName="activeNavLink" onClick={this.myFunction}> Mood </NavLink> 
                         <NavLink to="/dragndroppage" activeClassName="activeNavLink" onClick={this.myFunction}> DragNDrop </NavLink>
+                        <NavLink to="/mood" activeClassName="activeNavLink" onClick={this.myFunction}> MoodTracker </NavLink>
                     </div> 
                 {/* <NavLink to="/listpage" activeClassName="activeNavLink" onClick={this.myFunction}> ListPage </NavLink> */}
                 <a className="icon" onClick={this.toggle}>

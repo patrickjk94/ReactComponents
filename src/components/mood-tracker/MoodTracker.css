@@ -1,0 +1,105 @@
+.mood-component {
+    height: calc(100% - 4px); 
+    width: calc(100% - 4px); 
+    margin: auto; 
+    border: 2px solid grey;
+    border-radius: 3px; 
+    background-color: azure; 
+
+    position: relative; 
+}
+
+
+/************** Header ***************/ 
+
+.mood-header {
+    height: 40px; 
+    background-color:  #4CAF50CC; 
+    margin-bottom: 15px; 
+    color:  #FFFFFF; 
+    font-size: 1.5em; 
+    font-weight: 400; 
+    text-align: center;
+    vertical-align: middle;
+    line-height: 40px;       /* the same as your div height */
+}  
+
+  
+
+/************** Mood Buttons *****************/ 
+
+.mood-content{
+  padding-left: 10px; 
+  padding-right: 10px; 
+}
+
+.my-button-row {
+  width: 100%; 
+  display: flex;
+  flex-direction: row;
+}
+
+.mood-button {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background: #4CAF50;
+  width: 50%;  
+  /* margin: 10px; */
+  /* float: right;  */
+  /* center button    */
+  
+  border-radius: 0px;
+  border: 0;
+  padding: 15px;
+  
+  color: #FFFFFF;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+
+  
+  margin: 0px;
+  margin-top: 2px; 
+  margin-right: 1px;  
+  margin-left: 1px;  
+  border-radius: 2px; 
+}
+  
+.mood-happy-button {
+  background: #4CAF50;
+}
+
+.mood-sad-button {
+  background: blueviolet;
+}
+
+/* Color for the active button */ 
+.active-button {
+  background-color: #4CAF50EE; 
+} 
+
+
+
+/*********** View Results Button *************/ 
+
+.mood-results-button {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  background: #4CAF50;
+
+  position: absolute;
+  bottom: 0;
+
+  /* Supported in most modern browsers */ 
+  width: calc(100% - 10px);
+  margin: 5px; 
+  border: 0;
+  
+  /** to give the button some height **/ 
+  padding: 15px;
+  
+  color: #FFFFFF; /** text color of button **/ 
+  font-size: 14px;
+}

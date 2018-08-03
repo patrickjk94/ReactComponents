@@ -56,7 +56,7 @@
 .add-todo-button {
     /** width: 100%; **/
     margin: 8px 0px 8px 10px;
-    background-color: #4CAF50;
+    background-color: #4CAF50CA;
     color: white;
     padding: 11px 20px;
     border: none;

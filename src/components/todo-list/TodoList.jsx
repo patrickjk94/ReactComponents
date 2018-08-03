@@ -3,18 +3,27 @@ import PropTypes from 'prop-types'
 import Todo from './Todo'
 import { ListGroup } from 'react-bootstrap'; 
 
-const TodoList = ({ todos, toggleTodo }) => (
-  <ListGroup>
-    {todos.map(todo =>
-      <Todo
-        key={todo.id}
-        {...todo}
-        onClick={() => toggleTodo(todo.id)}
-      />
-    )}
-  </ListGroup>
-)
 
+export default class TodoList extends React.Component { 
+
+  // Render the list of todo items 
+  render() {
+    return(
+      <ListGroup className="todolist-list">
+      {this.props.todos.map(todo =>
+        <Todo
+          key={todo.id}
+          {...todo}
+          onClick={() => this.props.toggleTodo(todo.id)}
+        />
+      )}
+    </ListGroup>  
+    )
+  }
+  
+}
+
+//props requirements
 TodoList.propTypes = {
   todos: PropTypes.arrayOf(
     PropTypes.shape({
@@ -25,5 +34,3 @@ TodoList.propTypes = {
   ).isRequired,
   toggleTodo: PropTypes.func.isRequired
 }
-
-export default TodoList

@@ -16,7 +16,7 @@ const todos = (state, action) =>
       return [
         ...state,
         {
-          id: action.id,
+          id: getNewIndex(state),
           text: action.text,
           completed: false
         }
@@ -31,6 +31,14 @@ const todos = (state, action) =>
     default:
       return state
   }
+}
+
+function getNewIndex(state){
+  let i = 0; 
+  state.forEach((element, index, array) => {
+    i = element.id + i; 
+  })
+  return i; 
 }
 
 export default todos

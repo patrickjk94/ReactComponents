@@ -11,7 +11,7 @@ export default class LoginPage extends Component {
     return (
       <div className="login-page"> 
         <LoginRegisterComponent/> 
-        <img src={cactus_img} className="cactus-img" alt="two cactus" height="300" width="200"/>
+        <img src={cactus_img} className="cactus-img" alt="two cactus" height="200" width="200"/>
       </div> 
     );
   }

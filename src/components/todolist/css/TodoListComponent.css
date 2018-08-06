@@ -1,0 +1,147 @@
+:root {
+    --header-height: 40px; 
+    --border-radius: 2px; 
+    --todo-list-margin-btw: 10px; 
+}
+
+.todolist-component {
+    width: calc(100% - 4px);
+    height: calc(100% - 4px); 
+    margin-right: 10px; 
+    border: var(--border-radius) solid grey;
+    border-radius: 3px; 
+
+    background-color: #FFFFFF; 
+}
+
+.todolist-header {
+    height: var(--header-height); 
+    background-color:  #4CAF50CA; 
+
+    color: #FFFFFF; 
+    font-size: 1.5em; 
+    font-weight: 400; 
+    text-align: center;
+    /* vertical-align: middle; */
+    line-height: 40px;       /* the same as your div height */
+}
+
+.todolist-body {
+    padding-left: 10px; 
+    padding-right: 10px;
+    height: calc(100% - var(--header-height)); 
+    display: flex; 
+    flex-direction: column; 
+}
+
+/************ ADD TODO BAR **************/ 
+
+.todolist-add-todo {
+    height: calc(20% - 20px); 
+    min-height: 50px; 
+    
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    display: flex; 
+    flex-direction: row; 
+}
+
+.add-todo-input { 
+    width: 100%;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    box-sizing: border-box;  
+}
+
+.add-todo-button {
+    width: 20%;
+    max-width: 70px; 
+    margin-left: 10px; 
+
+    background-color: #4CAF50;
+    color: white;
+
+    padding: 0px; 
+
+    border: none;
+    border-radius: 2px;
+    font-size: 1.2em; 
+    cursor: pointer;
+}  
+
+/********* TODOLIST BODY  *****************/ 
+
+.todolist-list {
+    height: 70%; 
+}
+
+.todo-item {
+    height: 2em; 
+    background: white; 
+    border: 1px solid #ccc;
+    margin-bottom: 1px; 
+    border-radius: 2px; 
+    font-family: "Roboto", sans-serif;
+    line-height: 2em; /* match line-height to height so that it's centered */ 
+    padding-left: 10px; /** indent the text by 10px **/ 
+}
+
+/********** TODO LIST FOOTER **************/ 
+
+.todo-footer {
+    height: 15%; 
+    display: flex; 
+    flex-direction: row; 
+    justify-content: center;
+    margin-bottom: 10px; 
+
+    /* margin-bottom: auto; */
+}
+
+.filter-todo-button {
+    width: 100%; 
+    max-height: 50px; 
+    
+    padding: 0px;
+    border-radius: 2px; 
+    outline: 0;
+    border: 0;
+
+    /***** text stuff *****/ 
+    font-family: "Roboto", sans-serif;
+    text-transform: uppercase;
+    font-size: 1em;
+
+    background-color: #666666; 
+    color: #FFFFFF; 
+
+    -webkit-transition: all 0.3 ease;
+    transition: all 0.3 ease;
+}
+
+/************ HANDLE SCREEN CHANGES ***********/ 
+
+@media screen and (max-width: 497px) {
+    .todo-footer{
+        flex-direction: column; 
+        justify-content: center; 
+    }
+    .filter-todo-button{
+        margin-bottom: 10px; 
+        width: 100%; 
+    }
+}
+
+@media screen and (max-width: 625px){
+    .todolist-add-todo {
+        flex-direction: column; 
+        align-items:center;  
+    }
+    .add-todo-button {
+        width: 100%; 
+        margin: 8px 0px 8px 0px; 
+    }
+}
+

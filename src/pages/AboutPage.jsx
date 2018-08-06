@@ -7,6 +7,7 @@ export default class CardListPage extends Component {
     return (
     <div> 
       <p> <b> This is a simple Responsive Website using the MERN stack. </b> </p>
+      <p style={{fontSize: ".9em"}}> by Patrick J Kennedy </p> <br/> 
       <p> The <b> Front End </b> utilizes: </p>
         <ul> 
             <li> react-bootstrap </li> 

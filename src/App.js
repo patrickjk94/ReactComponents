@@ -42,7 +42,7 @@ class App extends Component {
                 <Route path="/dragndroppage" component={DragNDropPage} /> 
                 <Route path="/creditcardpage" component={CreditCardPage} />
                 <Route path="/aboutpage" component={AboutPage} />
-                <Route path="/moodpage" component={MoodTrackerPage} />
+                <Route path="/moodtrackerpage" component={MoodTrackerPage} />
                 {/* <Route path="/listpage" component={ListPage} />  */}
               </div>
             </div>

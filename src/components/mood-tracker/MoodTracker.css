@@ -4,7 +4,7 @@
     margin: auto; 
     border: 2px solid grey;
     border-radius: 3px; 
-    background-color: azure; 
+    /* background-color: azure;  */
 
     position: relative; 
 }
@@ -43,7 +43,7 @@
   font-family: "Roboto", sans-serif;
   text-transform: uppercase;
   outline: 0;
-  background: #4CAF50;
+  background-color:  #4CAF50CC; 
   width: 50%;  
   /* margin: 10px; */
   /* float: right;  */
@@ -68,16 +68,16 @@
 }
   
 .mood-happy-button {
-  background: #4CAF50;
+  background-color: --green-color;  
 }
 
 .mood-sad-button {
-  background: blueviolet;
+  background: rgba(137, 43, 226, 0.694);
 }
 
 /* Color for the active button */ 
 .active-button {
-  background-color: #4CAF50EE; 
+  background-color: --green-color; 
 } 
 
 
@@ -87,7 +87,7 @@
 .mood-results-button {
   font-family: "Roboto", sans-serif;
   text-transform: uppercase;
-  background: #4CAF50;
+  background: #4CAF50EE;
 
   position: absolute;
   bottom: 0;
@@ -95,10 +95,12 @@
   /* Supported in most modern browsers */ 
   width: calc(100% - 10px);
   margin: 5px; 
-  border: 0;
-  
+
+  border: 0; 
+  border-radius: 2px; 
+
   /** to give the button some height **/ 
-  padding: 15px;
+  padding: 10px;
   
   color: #FFFFFF; /** text color of button **/ 
   font-size: 14px;

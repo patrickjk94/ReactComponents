@@ -1,8 +1,7 @@
 import { connect } from 'react-redux'
-import MyTable from '../MyTable'
 
 //Import the actions and action-creators
-import { login } from "../../../actions/login-actions";
+import { login } from '../../actions/login-actions';
 import LoginComponent from './LoginComponent';
 
 const mapStateToProps = state => {

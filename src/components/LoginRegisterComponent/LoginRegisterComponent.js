@@ -2,12 +2,13 @@ import React from 'react';
 import { NavLink } from 'react-router-dom'; 
 import LoginComponent from '../login/LoginComponent';
 import RegisterComponent from '../register/RegisterComponent';
+import RegisterContainer from '../register/RegisterContainer';
+import LoginContainer from '../login/LoginContainer';
 
 export default class LoginRegisterComponent extends React.Component {
 
     constructor(props) {
         super(); 
-
         this.state = {
             display_login : true
         }
@@ -23,9 +24,9 @@ export default class LoginRegisterComponent extends React.Component {
         let displayed_item; 
 
         if(this.state.display_login){
-            return <LoginComponent register={this.toggle} /> ; 
+            return <LoginContainer register={this.toggle} /> ; 
         } else {
-            return <RegisterComponent login={this.toggle} /> ; 
+            return <RegisterContainer login={this.toggle} /> ; 
         }
     }
 }   

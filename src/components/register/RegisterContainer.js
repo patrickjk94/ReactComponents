@@ -1,20 +1,20 @@
 import { connect } from 'react-redux'
+
+// 1. import the actions and action-creators
 import RegisterComponent from './RegisterComponent'
+import { registerUser } from '../../actions/register-actions';
 
-//1. import the actions and action-creators
+// 2. map redux state to component props 
+const mapStateToProps = state => { return {}; }
 
-const mapStateToProps = state => {
-  return {
-  };
-}
-
+// 3. map dispatch action/action-creator to component props 
 const mapDispatchToProps = dispatch => {
   return {
-    removeUser: (id) => dispatch(deleteUser(id)), 
+    registerUser: (user) => dispatch(registerUser(user))
   }
 }
 
-//Connect to TodoList component.
+//4. connect methdods and redux-store to Component 
 export default connect(
   mapStateToProps,
   mapDispatchToProps

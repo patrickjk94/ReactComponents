@@ -10,7 +10,6 @@ import LoginPage from './pages/LoginPage';
 import TablePage  from './pages/TablePage';
 import TodoPage from './pages/TodoPage';
 import DragNDropPage from "./pages/DragNDropPage"; 
-import CreditCardPage from "./pages/CreditCardPage"; 
 import CardListPage from './pages/CardListPage';
 import AboutPage from './pages/AboutPage'; 
 import ListPage from './pages/ListPage'; 
@@ -40,7 +39,6 @@ class App extends Component {
                 <Route path="/todopage" component={TodoPage} />
                 <Route path="/cardlistpage" component={CardListPage} /> 
                 <Route path="/dragndroppage" component={DragNDropPage} /> 
-                <Route path="/creditcardpage" component={CreditCardPage} />
                 <Route path="/aboutpage" component={AboutPage} />
                 <Route path="/moodtrackerpage" component={MoodTrackerPage} />
                 {/* <Route path="/listpage" component={ListPage} />  */}

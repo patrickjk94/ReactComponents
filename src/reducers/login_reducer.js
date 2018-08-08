@@ -1,12 +1,12 @@
 /* 
 *  The Filter used for logining in  
 */ 
-const searchFilter = (state={}, action) => 
+const loginReducer = (state={}, action) => 
 {
   switch(action.type)
   {
-    case "ADD_USER": 
-      return action.user; 
+    case "REGISTER_USER": 
+      return action.success; 
     default: 
       return state; 
   }

@@ -18,7 +18,11 @@ export default class AddUser extends React.Component {
         this.addUser = this.addUser.bind(this); 
     }
 
-    updateFName(evt){ this.setState({ fname: evt.target.value }); }
+    updateFName(evt){ 
+        this.setState({ 
+            fname: evt.target.value 
+        });
+    }
 
     updateLName(evt){
         this.setState({

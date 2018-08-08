@@ -4,8 +4,9 @@
     margin: auto; 
     border: 2px solid grey;
     border-radius: 3px; 
-    /* background-color: azure;  */
 
+    background-color: #FFFFFF; 
+    /* background-color: azure;  */
     position: relative; 
 }
 
@@ -31,6 +32,8 @@
 .mood-content{
   padding-left: 10px; 
   padding-right: 10px; 
+  background-color: #FFFFFF; 
+
 }
 
 .my-button-row {
@@ -83,7 +86,6 @@
 
 
 /*********** View Results Button *************/ 
-
 .mood-results-button {
   font-family: "Roboto", sans-serif;
   text-transform: uppercase;

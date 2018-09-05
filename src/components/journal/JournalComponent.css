@@ -1,0 +1,53 @@
+.journal-component {
+    height: calc(100%); 
+    width: calc(100%); 
+    margin: auto;  
+    /* border: 2px solid grey; */
+    border-radius: 3px; 
+
+    background-color: #FFFFFF; 
+    /* background-color: azure;  */
+    position: relative; 
+}
+
+.journal-header{
+    margin: 10px; 
+    /* color: #4CAF50EE; */
+}
+
+.textarea-container {
+    min-height: 200px;  
+    min-width: 300px; 
+    margin: 5px; 
+}
+
+.journal-text-area {
+    height: 100%; 
+    width: 100%; 
+    margin-right: 0px; 
+    resize: none; 
+}
+
+.save-journal-button {
+    font-family: "Roboto", sans-serif;
+    text-transform: uppercase;
+    background: #4CAF50EE;
+  
+    position: absolute;
+    bottom: 0;
+  
+    /* Supported in most modern browsers */ 
+    width: calc(100% - 10px);
+    margin: 5px; 
+    margin-top: 50px;   
+  
+    border: 0; 
+    border-radius: 2px; 
+  
+    /** to give the button some height **/ 
+    padding: 10px;
+    
+    color: #FFFFFF; /** text color of button **/ 
+    font-size: 14px;
+  }
+  

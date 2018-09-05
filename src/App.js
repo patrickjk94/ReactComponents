@@ -15,6 +15,8 @@ import AboutPage from './pages/AboutPage';
 import ListPage from './pages/ListPage'; 
 import MoodTrackerPage from './pages/MoodPage'; 
 import CardList from './components/card-list/CardList';
+import JournalPage from './pages/JournalPage';
+import LayoutPage from './pages/LayoutPage';
 
 
 class App extends Component {
@@ -41,6 +43,8 @@ class App extends Component {
                 <Route path="/dragndroppage" component={DragNDropPage} /> 
                 <Route path="/aboutpage" component={AboutPage} />
                 <Route path="/moodtrackerpage" component={MoodTrackerPage} />
+                <Route path="/journalpage" component={JournalPage} />
+                <Route path="/layoutpage" component={LayoutPage} />
                 {/* <Route path="/listpage" component={ListPage} />  */}
               </div>
             </div>

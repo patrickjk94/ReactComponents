@@ -13,7 +13,8 @@ export default class LoginComponent extends React.Component {
         }
 
         this.updateUsername = this.updateUsername.bind(this); 
-        this.updatePassword = this.updatePassword.bind(this); 
+        this.updatePassword = this.updatePassword.bind(this);
+        this.loginDemoUser = this.loginDemoUser.bind(this); 
         this.login = this.login.bind(this); 
     }
 
@@ -28,6 +29,14 @@ export default class LoginComponent extends React.Component {
         this.props.login(user); 
     }
 
+    loginDemoUser(e){
+        var user = {
+            username: 'user', 
+            password: 'password', 
+        };
+        this.props.login(user); 
+    }
+
     render() {
         return <div className="login-page">
             <div className="form">
@@ -35,9 +44,11 @@ export default class LoginComponent extends React.Component {
             <form className="login-form">
                 <input type="text" placeholder="username" value={this.state.username} onChange={evt => this.updateUsername(evt)}/>
                 <input type="password" placeholder="password" value={this.state.password} onChange={evt => this.updatePassword(evt)}/>
-                <button onClick={this.login}> login </button>
                 <p className="message"> Not registered? <a href="#" onClick={this.props.register}> Create an account </a></p>
-                </form>
+            </form>
+            <button onClick={this.login}> login </button>
+            <button onClick={this.loginDemoUser} className="demo-button"> login demo user </button>
+
             </div>
         </div>
         }

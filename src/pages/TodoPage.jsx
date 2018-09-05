@@ -4,7 +4,7 @@ import TodoListComponent from "../components/todo-list/TodoListComponent";
 export default class TodoPage extends Component {
   render() {
     return (
-      <div className="todo-page-todo-container"> 
+      <div className="todo-page-todo-container todolist-component"> 
         <TodoListComponent/> 
       </div> 
       );

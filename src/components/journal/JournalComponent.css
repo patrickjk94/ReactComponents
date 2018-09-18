@@ -1,32 +1,62 @@
-.journal-component {
-    height: calc(100%); 
-    width: calc(100%); 
-    margin: auto;  
-    /* border: 2px solid grey; */
+.journal-container {
+    height: 300px; 
+    width: 300px;
+    /* border: 2px solid grey;  */
+    border: 1px solid rgba(0, 0, 0, 0.405);     
     border-radius: 3px; 
-
-    background-color: #FFFFFF; 
-    /* background-color: azure;  */
-    position: relative; 
 }
 
-.journal-header{
-    margin: 10px; 
-    /* color: #4CAF50EE; */
-}
-
-.textarea-container {
-    min-height: 200px;  
-    min-width: 300px; 
-    margin: 5px; 
-}
-
-.journal-text-area {
+.journal-component {
     height: 100%; 
     width: 100%; 
-    margin-right: 0px; 
-    resize: none; 
+    /* margin: auto;   */
+    /* border: 2px solid grey; */
+    /* border-radius: 3px;  */
+
+    /* background-color: green;  */
+    /* background-color: azure;  */
+    /* position: relative;  */
+    position: relative;
+
+    /* display: flex; 
+    flex-direction: column;
+    flex-basis: 0; */
 }
+
+/* .journal-header {
+    margin: 10px; 
+    overflow: hidden;
+    /* color: #4CAF50EE; */
+/*} */
+
+.journal-header {
+    height: 40px; 
+    background-color:  #4CAF50CC; 
+    margin-bottom: 15px; 
+    color:  #FFFFFF; 
+    font-size: 1.5em; 
+    font-weight: 400; 
+    text-align: center;
+    vertical-align: middle;
+    line-height: 40px;       /* the same as your div height */
+}  
+
+
+.textarea-container {
+    /* min-height: 200px;   */
+    /* min-width: 300px;  */
+    height: calc(80% - 40px); /* percentage minus header height and button height */  
+    width: calc(100% - 10px); 
+    margin: 5px;
+}
+
+    .journal-text-area {
+        height: 98%; 
+        width: 100%; 
+        border-radius: 3px; 
+        margin-right: 0px; 
+        resize: none; 
+    }
 
 .save-journal-button {
     font-family: "Roboto", sans-serif;
@@ -38,14 +68,15 @@
   
     /* Supported in most modern browsers */ 
     width: calc(100% - 10px);
-    margin: 5px; 
-    margin-top: 50px;   
+    /* margin: 5px;  */
+    /* margin-top: 50px;    */
   
     border: 0; 
     border-radius: 2px; 
   
     /** to give the button some height **/ 
     padding: 10px;
+    margin: 5px; 
     
     color: #FFFFFF; /** text color of button **/ 
     font-size: 14px;

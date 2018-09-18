@@ -5,13 +5,15 @@
 }
 
 .todolist-component {
-    width: calc(100% - 4px);
-    height: calc(100% - 4px); 
-    margin-right: 10px; 
-    border: var(--border-radius) solid grey;
+    width: 100%; 
+    height: 100%; 
+    /* width: calc(100% - 4px); */
+    /* height: calc(100% - 4px);  */
+    /* margin-right: 10px; */ 
+    border: 1px solid rgba(0, 0, 0, 0.405); 
+    /* border: var(--border-radius) solid rgba(128, 128, 128, 0.748);  */
     border-radius: 3px; 
-
-    background-color: #FFFFFF; 
+    /* background-color: #FFFFFF;  */
 }
 
 .todolist-header {
@@ -88,29 +90,47 @@
     padding-left: 10px; /** indent the text by 10px **/ 
 }
 
+.fa-trash { 
+    float: right; 
+}
+
 /********** TODO LIST FOOTER **************/ 
 
 .todo-footer {
-    height: 15%; 
+    /* height: 15%;  */
+    width: 100%; 
+
     display: flex; 
     flex-direction: row; 
     justify-content: center;
-    margin-bottom: 10px; 
+    flex-grow: 1;
+    flex-basis: 0;  
+    
+    margin-bottom: 60px; 
 
-    /* margin-bottom: auto; */
+    /* Move footer to bottom of component */ 
+    /* position: absolute; */
+    bottom: 0;
 }
 
 .filter-todo-button {
+    height: 50px;
+    padding: 15px;
+    width: 100%; 
+    margin-bottom: 10px; 
+    flex-basis: 0;  
+
+
     font-family: "Roboto", sans-serif;
     text-transform: uppercase;
     outline: 0;
     border: 0;
     border-radius: 2px; 
-    padding: 15px;
     font-size: 14px;
-    width: 100%; 
     background-color: #666666; 
     color: #FFFFFF; 
+
+    /* what do these transitions do? */ 
     -webkit-transition: all 0.3 ease;
     transition: all 0.3 ease;
 }

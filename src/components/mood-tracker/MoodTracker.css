@@ -2,7 +2,8 @@
     height: calc(100% - 4px); 
     width: calc(100% - 4px); 
     margin: auto; 
-    border: 2px solid grey;
+    /* border: 2px solid grey; */
+    border: 1px solid rgba(0, 0, 0, 0.405); 
     border-radius: 3px; 
 
     background-color: #FFFFFF; 
@@ -25,15 +26,18 @@
     line-height: 40px;       /* the same as your div height */
 }  
 
+
+
   
 
 /************** Mood Buttons *****************/ 
 
-.mood-content{
+.mood-content {
+  margin-top: 10px; 
+  margin-bottom: 10px; 
   padding-left: 10px; 
   padding-right: 10px; 
   background-color: #FFFFFF; 
-
 }
 
 .my-button-row {
@@ -74,16 +78,22 @@
   background-color: --green-color;  
 }
 
+.mood-happy-button:visited {
+  background: rgb(56, 153, 59); 
+}
+
 .mood-sad-button {
   background: rgba(137, 43, 226, 0.694);
+}
+
+.mood-sad-button:focus, mood-sad-button:active{
+  background:rgb(137, 43, 226);
 }
 
 /* Color for the active button */ 
 .active-button {
   background-color: --green-color; 
 } 
-
-
 
 /*********** View Results Button *************/ 
 .mood-results-button {
@@ -107,3 +117,4 @@
   color: #FFFFFF; /** text color of button **/ 
   font-size: 14px;
 }
+

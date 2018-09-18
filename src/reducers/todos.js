@@ -27,6 +27,8 @@ const todos = (state, action) =>
           ? {...todo, completed: !todo.completed}
           : todo
       )
+      case 'DELTE_TODO': 
+        console.log("deleted todo: " + action.todo.id); 
 
     default:
       return state

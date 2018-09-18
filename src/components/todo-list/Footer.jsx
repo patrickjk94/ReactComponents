@@ -8,9 +8,9 @@ export default class Footer extends React.Component {
   render() {
     return (
       <div className="todo-footer">
-        {/* <FilterButton className="filter-todo-button" filter={VisibilityFilters.SHOW_ALL}>
+        <FilterButton className="filter-todo-button" filter={VisibilityFilters.SHOW_ALL}>
           All
-        </FilterButton> */}
+        </FilterButton>
         <FilterButton className="filter-todo-button" filter={VisibilityFilters.SHOW_ACTIVE}>
           Active
         </FilterButton>

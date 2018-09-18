@@ -10,7 +10,7 @@ export default class MoodTracker extends React.Component {
 
     render(){
         return (
-            <div>
+            <React.Fragment>
                 {/** Header **/}
                 <div className="mood-header">Mood Tracker</div>
                 <div className="mood-content"> 
@@ -30,7 +30,7 @@ export default class MoodTracker extends React.Component {
                     </div>
                 </div> 
                 {/* <button className="mood-results-button"> View Graph </button>  */}
-            </div> 
+            </React.Fragment> 
         )
     }
 }

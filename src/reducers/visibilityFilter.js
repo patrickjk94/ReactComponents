@@ -25,6 +25,11 @@ export const VisibilityFilters = {
       id
   })
 
+  export const deleteTodo = id => ({
+    type: 'DELETE_TODO', 
+    id
+  })
+
 /** Reducer **/
 const visibilityFilter = (state = VisibilityFilters.SHOW_ACTIVE, action) => {
   switch (action.type) {

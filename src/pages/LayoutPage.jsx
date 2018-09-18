@@ -13,9 +13,7 @@ export default class LayoutPage extends Component {
                 <TodoListComponent/> 
             </div> 
             <div className="main-page-middle-container"> 
-                <div className="simple-component-bottom">
-                    <JournalComponent/> 
-                </div> 
+                <JournalComponent/> 
             </div> 
             <div className="main-page-right-container"> 
                 <MoodTracker/>  

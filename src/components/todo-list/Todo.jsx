@@ -11,8 +11,7 @@ export default class Todo extends React.Component {
 
   deleteTodo(evt) { 
     this.props.deleteTodo(evt.target.value); 
-    evt.stopPropagation();
-    alert("deleting todo: " + this.props.text); 
+    evt.stopPropagation(); // This is so that the parent element isn't focused on click
   }
 
 

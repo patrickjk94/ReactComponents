@@ -15,7 +15,7 @@ export default class MoodTracker extends React.Component {
 
     componentDidMount() {
         this.setState({
-        canvasDimensions: {
+            canvasDimensions: {
               width: this.container.offsetWidth,
               height: this.container.offsetHeight,
             }
@@ -23,10 +23,10 @@ export default class MoodTracker extends React.Component {
     }    
 
     renderCanvas() {
-        const { dimensions } = this.state;
+        const { canvasDimensions } = this.state;
 
         return (
-            <CanvasComponent dimensions={dimensions} className="cactusCanvas"></CanvasComponent> 
+            <CanvasComponent canvasDimensions={canvasDimensions} className="cactusCanvas"></CanvasComponent> 
         );
     }
 

@@ -25,7 +25,7 @@ export default class Todo extends React.Component {
         }}
       >
         {this.props.text}
-        <button class="fa fa-trash" aria-hidden="true" onClick={this.deleteTodo} ></button> 
+        <button className="fa fa-trash" aria-hidden="true" onClick={this.deleteTodo} ></button> 
       </ListGroupItem>
       </React.Fragment>  
     )

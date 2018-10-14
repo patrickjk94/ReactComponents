@@ -15,6 +15,7 @@ export default class TodoList extends React.Component {
           key={todo.id}
           {...todo}
           onClick={() => this.props.toggleTodo(todo.id)}
+          deleteTodo={() => this.props.deleteTodo(todo.id)}
         />
       )}
     </ListGroup>  

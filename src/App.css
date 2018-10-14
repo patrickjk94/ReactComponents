@@ -1,10 +1,14 @@
 /* Remove unnecessary margins/padding */
-html, body { height:100%; min-height:100%; margin: 0; padding: 0;}
-#root { height: 100%; min-height: 100%; padding: 0px; margin: 0px; }
+* {  box-sizing: border-box; } /** This makes padding and border work as expected. **/ 
+html, body { height:100%; margin: 0; padding: 0;}
+#root { height: 100%; padding: 0px; margin: 0px; }
+
 
 :root {
-  --green-color: rgba(76, 175, 79, 0.871); 
+  --green-color: rgba(92, 177, 95, 0.871); 
+  --green-color-dark: rgb(56, 153, 59); 
   --purple-color: rgba(137, 43, 226, 0.694);
+  --purple-color-dark: rgb(137, 43, 226); 
 }
 
 .wrapper {

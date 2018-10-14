@@ -23,13 +23,15 @@ class AddTodo extends React.Component {
     //Update the store and state 
     this.props.addTodo(this.state.input_value); 
     this.setState({ input_value: "" });
+    var form = document.getElementById("add-todo-form");
+    form.reset();
   }
 
   render() 
   {
     return (
       <div >
-        <form onSubmit={e => this.submit(e)}>
+        <form id="add-todo-form" onSubmit={e => this.submit(e)}>
           <div className="todolist-add-todo"> {/*className="add-todo-input"*/} 
             <input type="text" className="add-todo-input" onChange={evt => this.updateInput(evt)} />
             <input type="submit" className="add-todo-button"  value="Add" /> 

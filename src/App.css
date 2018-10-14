@@ -1,6 +1,8 @@
 /* Remove unnecessary margins/padding */
+* {  box-sizing: border-box; } /** This makes padding and border work as expected. **/ 
 html, body { height:100%; margin: 0; padding: 0;}
 #root { height: 100%; padding: 0px; margin: 0px; }
+
 
 :root {
   --green-color: rgba(92, 177, 95, 0.871); 

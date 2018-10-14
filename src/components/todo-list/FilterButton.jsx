@@ -10,7 +10,6 @@ class FilterButton extends React.Component
       <button className={ this.props.active ?  this.props.className + " active-button" : this.props.className }
         onClick={ this.props.onClick }
         disabled={ this.props.active } 
-        style={{ marginLeft: '4px' }}
       >
        {this.props.children}
      </button> 

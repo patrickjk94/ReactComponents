@@ -5,7 +5,6 @@ var constants = require('../constants.js')
 export function login(user) {
     console.log("login action creator : " + user.username + " " + user.email + " " + user.password); 
     return (dispatch) => {
-        
         //dispatch(itemsIsLoading(true));
         axios.post(constants.server_url.concat(`/loginUser`), user )
         .then(res => {

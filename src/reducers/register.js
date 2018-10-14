@@ -7,7 +7,7 @@ const register = (state={}, action) =>
   {
     case "REGISTER_USER": 
       console.log("hitting the REGISTER USER redux store"); 
-      return action.success; 
+      return state; //TODO: actually change the state!  
     default: 
       return state; 
   }
